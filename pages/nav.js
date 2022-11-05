@@ -1,7 +1,6 @@
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from "react";
-import "bootstrap/js/src/collapse.js";
 
 export default function navigation() {
 
@@ -15,7 +14,10 @@ export default function navigation() {
         }
     };
 
-    window.addEventListener('scroll', changeNavBar);
+    useEffect(() => {
+        require("bootstrap/dist/js/bootstrap.bundle.min.js");
+        window.addEventListener('scroll', changeNavBar);
+    }, []);
 
     return (
         <nav className={navBar ? `navbar navbar-expand-lg sticky fixed-top styles-nav stickyadd` : `navbar navbar-expand-lg sticky fixed-top styles-nav`}>
