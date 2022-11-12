@@ -163,6 +163,24 @@ header {
   transition: 0.5s all;
 }
 
+/* Skills Section*/
+
+.skills .progress {
+  height: 0.7rem;
+  border-radius: 1.25rem;
+  font-size: 0.7rem;
+}
+
+.progress-bar {
+    width: 0%;
+    background-color: #ee8683 !important;
+}
+
+.skills label {
+    font-size: 1.25rem;
+    margin: 0.7rem;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

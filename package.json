@@ -22,6 +22,8 @@
     "react-bootstrap": "^2.5.0",
     "react-dom": "18.2.0",
     "react-scroll": "^1.8.8",
+    "react-useonview": "^1.2.2",
+    "react-waypoint": "^10.3.0",
     "typed.js": "^2.0.12"
   }
 }

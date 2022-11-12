@@ -7,7 +7,7 @@ export default function header() {
 
     useEffect(() => {
         const typed = new Typed(element.current, {
-          strings: ["Adam Adamson","A Full-Stack Web Developer","A Software Engineer","Your best employee candidate"], // Strings to display
+          strings: ["Adam Adamson","a Full-Stack Web Developer","a Software Engineer","your best employee candidate"], // Strings to display
           // Speed settings, try diffrent values untill you get good results
           startDelay: 300,
           typeSpeed: 100,
@@ -19,7 +19,7 @@ export default function header() {
 
         return () => {
             typed.destroy();
-          };
+        };
     }, []);
 
     return (
@@ -28,8 +28,8 @@ export default function header() {
                 <div className="row">
                     <div className="col text-center">
                         <div className="content-box">
-                            <h4>Welcome</h4>
-                            <h1><span ref={element} className="element"></span></h1>
+                            <h4>Hi</h4>
+                            <h1><span>I'm </span><span ref={element} className="element"></span></h1>
                             <p><span></span></p>
                             <a href="#" className="btn">Download Resume</a>
                         </div>
