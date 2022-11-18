@@ -1,5 +1,6 @@
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import clsx from 'clsx';
 import React, { useEffect, useState } from "react";
 
 export default function navigation() {
@@ -22,7 +23,7 @@ export default function navigation() {
     return (
         <nav className={navBar ? `navbar navbar-expand-lg sticky fixed-top styles-nav stickyadd` : `navbar navbar-expand-lg sticky fixed-top styles-nav`}>
             <div className="container">
-                <a href="#" className="navbar-brand">MyPortfolioProject</a> 
+                <a href="#" className="navbar-brand">MyPortfolioProject</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarId">
                     <span><FontAwesomeIcon className="hamburger" icon={faBars} /></span>
                 </button>

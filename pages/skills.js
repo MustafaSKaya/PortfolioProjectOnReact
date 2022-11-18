@@ -1,5 +1,7 @@
 import { Waypoint } from 'react-waypoint';
 import { useEffect, useState } from "react";
+import { faHtml5, faCss3Alt, faJs } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export default function skills() {
 
@@ -16,12 +18,12 @@ export default function skills() {
     //console.log(typeof progressBars);
 
     const handleView = () => {
-        
+
         progressBars[0].style.width = htmlProgress;
         progressBars[1].style.width = cssProgress;
         progressBars[2].style.width = jQueryProgress;
         progressBars[3].style.width = reactProgress;
-        
+
         Object.values(progressBars).forEach(element => element.style.transition = "3s all");
     };
 
@@ -42,31 +44,31 @@ export default function skills() {
                     <div className="col-md-6 d-flex justify-content-center align-items-center">
                         <h3>My Skills</h3>
                     </div>
-                    <div className="col-md-6">
-                        <label>HTML</label>
+                    <div className="col-md-6 mb-4">
+                        <label><FontAwesomeIcon icon={faHtml5} />HTML</label>
                         <div className="progress">
                             <div className="progress-bar html-bar" role="progressbar" aria-valuenow="0"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
+                                aria-valuemin="0"
+                                aria-valuemax="100"
                             >{htmlProgress}</div>
                         </div>
-                        <label>CSS</label>
+                        <label><FontAwesomeIcon icon={faCss3Alt} />CSS</label>
                         <div className="progress">
                             <div className="progress-bar css-bar" role="progressbar" aria-valuenow="0"
-                            aria-valuemin="0"
-                            aria-valuemax="100">{cssProgress}</div>
+                                aria-valuemin="0"
+                                aria-valuemax="100">{cssProgress}</div>
                         </div>
-                        <label>jQuery</label>
+                        <label><div className="jQuery"></div>jQuery</label>
                         <div className="progress">
                             <div className="progress-bar jQuery-bar" role="progressbar" aria-valuenow="0"
-                            aria-valuemin="0"
-                            aria-valuemax="100">{jQueryProgress}</div>
+                                aria-valuemin="0"
+                                aria-valuemax="100">{jQueryProgress}</div>
                         </div>
-                        <label>Javascript</label>
+                        <label><FontAwesomeIcon icon={faJs} />Javascript</label>
                         <div className="progress">
                             <div className="progress-bar js-bar" role="progressbar" aria-valuenow="0"
-                            aria-valuemin="0"
-                            aria-valuemax="100">{reactProgress}</div>
+                                aria-valuemin="0"
+                                aria-valuemax="100">{reactProgress}</div>
                         </div>
                     </div>
                 </div>

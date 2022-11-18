@@ -7,14 +7,14 @@ export default function header() {
 
     useEffect(() => {
         const typed = new Typed(element.current, {
-          strings: ["Adam Adamson","a Full-Stack Web Developer","a Software Engineer","your best employee candidate"], // Strings to display
-          // Speed settings, try diffrent values untill you get good results
-          startDelay: 300,
-          typeSpeed: 100,
-          backSpeed: 100,
-          backDelay: 100,
-          loop: true,
-          loopCount: Infinity
+            strings: ["Adam Adamson", "a Full-Stack Web Developer", "a Software Engineer", "your best employee candidate"], // Strings to display
+            // Speed settings, try diffrent values untill you get good results
+            startDelay: 300,
+            typeSpeed: 100,
+            backSpeed: 100,
+            backDelay: 100,
+            loop: true,
+            loopCount: Infinity
         });
 
         return () => {

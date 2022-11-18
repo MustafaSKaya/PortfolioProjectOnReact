@@ -144,7 +144,7 @@ header {
 }
 
 .about li a .fa-facebook-f:hover {
-  color: #00008B;
+  color: #0E4399;
   transition: 0.5s all;
 }
 
@@ -165,8 +165,12 @@ header {
 
 /* Skills Section*/
 
+.skills {
+  background-color: #dcf1f485;
+}
+
 .skills .progress {
-  height: 0.7rem;
+  height: 1.25rem;
   border-radius: 1.25rem;
   font-size: 0.7rem;
 }
@@ -179,6 +183,34 @@ header {
 .skills label {
     font-size: 1.25rem;
     margin: 0.7rem;
+}
+
+.jQuery {
+  display: inherit;
+  flex-direction: row;
+  width: 1rem;
+  height: 1rem;
+  background-image: url(../images/jquery.png);
+  background-size: cover;
+  background-position: center;
+}
+
+/* Projects Section */
+
+.projects .card-wrapper {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.btn-danger {
+  margin-right: .5rem;
+  margin-left: .5rem;
+}
+
+.project-title {
+  background: #808080;
+  border-radius: 0 0 25px 25px;
+  opacity: 0.7;
 }
 
 @media (prefers-color-scheme: dark) {

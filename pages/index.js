@@ -5,14 +5,18 @@ import Navigation from './nav.js';
 import Header from './header.js';
 import About from './about.js';
 import Skills from './skills.js';
+import Projects from './projects.js'
 
 export default function Home() {
   return (
     <div>
       <Navigation/>
+      
       <Header/>
       <About/>
+      <Projects/>
       <Skills/>
+      
     </div>
   )
 }
