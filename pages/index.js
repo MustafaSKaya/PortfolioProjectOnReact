@@ -11,12 +11,10 @@ export default function Home() {
   return (
     <div>
       <Navigation/>
-      
       <Header/>
       <About/>
-      <Projects/>
       <Skills/>
-      
+      <Projects/>
     </div>
   )
 }

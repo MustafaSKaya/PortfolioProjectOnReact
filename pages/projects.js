@@ -5,7 +5,7 @@ import Project2Photo from '../images/2.jpg';
 import Project3Photo from '../images/3.jpg';
 import Project4Photo from '../images/4.jpg';
 import Project6Photo from '../images/6.jpg';
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const temporaryProjectsArrayofObjects = [
     {
@@ -37,7 +37,20 @@ const temporaryProjectsArrayofObjects = [
         name: "Project6",
         imageURL: Project6Photo,
         madeWith: ["Javascript", "jQuery"]
+    },
+    {
+        id: 7,
+        name: "Project7",
+        imageURL: Project1Photo,
+        madeWith: ["Javascript", "jQuery"]
+    },
+    {
+        id: 8,
+        name: "Project8",
+        imageURL: Project2Photo,
+        madeWith: ["Javascript", "React"]
     }
+
 ]
 
 export default function projects() {
@@ -50,7 +63,8 @@ export default function projects() {
             setFiltered(temporaryProjectsArrayofObjects);
             return
         };
-        setFiltered(temporaryProjectsArrayofObjects.filter((project) => project.madeWith.includes(activeFilter)))
+        setFiltered(temporaryProjectsArrayofObjects.filter((project) => project.madeWith.includes(activeFilter)));
+        console.log(filtered);
     }, [activeFilter])
 
     return (
@@ -71,16 +85,17 @@ export default function projects() {
                         className="btn btn-danger">React/Javascript</button>
                     </div>
                 </div>
-                <div className="container">
+                <motion.div layout className="container">
                     <div className="row filter-container mx-auto">
+                        <AnimatePresence>
                         {filtered.map((project) => {
-                            return <motion.div layout initial={{ x:-500, opacity: 0, scale: 0.5}} animate={{ x: 0, opacity:1, scale:1}} transition={{ duration: 1.5 }} className="col-xs-6 col-sm-4 col-md-4 card-wrapper">
-                            <Image src={project.imageURL} href="" className="img-fluid" alt="" id={project.id}></Image>
+                            return <motion.div layout initial={{ x:-500, opacity: 0, scale: 0.5}} animate={{ x: 0, opacity:1, scale:1}} exit={{ x:-500, opacity: 0, scale: 0}} transition={{ duration: 1.5 }} key={project.id}className="col-xs-6 col-sm-4 col-md-4 card-wrapper">
+                            <Image src={project.imageURL} href="" className="img-fluid" alt=""></Image>
                             </motion.div>
                         })}
+                        </AnimatePresence>
                     </div>
-
-                </div>
+                </motion.div>
             </div>
         </section>
     )
