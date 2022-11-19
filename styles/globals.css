@@ -143,9 +143,17 @@ header {
   text-align: center;
 }
 
+.about li a .fa-facebook-f {
+  transition: 3s all;
+}
+
 .about li a .fa-facebook-f:hover {
   color: #0E4399;
   transition: 0.5s all;
+}
+
+.about li a .fa-twitter {
+  transition: 3s all;
 }
 
 .about li a .fa-twitter:hover {
@@ -153,9 +161,17 @@ header {
   transition: 0.5s all;
 }
 
+.about li a .fa-linkedin {
+  transition: 3s all;
+}
+
 .about li a .fa-linkedin:hover {
   color: #1E90FF;
   transition: 0.5s all;
+}
+
+.about li a .fa-github {
+  transition: 3s all;
 }
 
 .about li a .fa-github:hover {
@@ -165,9 +181,9 @@ header {
 
 /* Skills Section*/
 
-.skills {
+/*.skills {
   background-color: #dcf1f485;
-}
+}*/
 
 .skills .progress {
   height: 1.25rem;
@@ -211,6 +227,43 @@ header {
   background: #808080;
   border-radius: 0 0 25px 25px;
   opacity: 0.7;
+}
+
+/* Services Section */
+
+/*.services {
+  background-color: #dcf1f485;
+}*/
+
+.card {
+  margin: 1rem 0 1rem 0;
+  background: #f8f9fa !important;
+}
+
+.card-header {
+  padding: 1rem 0 0 0;
+  background: #f8f9fa !important;
+  border: none !important;
+}
+
+.services .card-header .icon {
+  font-size: 2rem;
+}
+
+.service-border {
+  height: 2px;
+  width: 40px;
+  margin: 15px auto;
+  background: #e65f78;
+  transition: 0.5s all;
+}
+
+.services:hover .service-border {
+  width: 200px;
+}
+
+.services p {
+  font-size: 16px;
 }
 
 @media (prefers-color-scheme: dark) {

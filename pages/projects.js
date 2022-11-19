@@ -18,7 +18,7 @@ const temporaryProjectsArrayofObjects = [
         id: 2,
         name: "Project2",
         imageURL: Project2Photo,
-        madeWith: ["Javascript", "React"]
+        madeWith: ["Javascript", "jQuery"]
     },
     {
         id: 3,
@@ -30,7 +30,7 @@ const temporaryProjectsArrayofObjects = [
         id: 4,
         name: "Project4",
         imageURL: Project4Photo,
-        madeWith: ["Javascript", "jQuery"]
+        madeWith: ["Javascript", "React"]
     },
     {
         id: 5,
@@ -89,7 +89,7 @@ export default function projects() {
                     <div className="row filter-container mx-auto">
                         <AnimatePresence>
                         {filtered.map((project) => {
-                            return <motion.div layout initial={{ x:-500, opacity: 0, scale: 0.5}} animate={{ x: 0, opacity:1, scale:1}} exit={{ x:-500, opacity: 0, scale: 0}} transition={{ duration: 1.5 }} key={project.id}className="col-xs-6 col-sm-4 col-md-4 card-wrapper">
+                            return <motion.div layout initial={{ opacity: 0 }} animate={{ opacity:1 }} exit={{ opacity: 0 }} key={project.id}className="col-xs-6 col-sm-4 col-md-4 card-wrapper">
                             <Image src={project.imageURL} href="" className="img-fluid" alt=""></Image>
                             </motion.div>
                         })}

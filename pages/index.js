@@ -5,7 +5,8 @@ import Navigation from './nav.js';
 import Header from './header.js';
 import About from './about.js';
 import Skills from './skills.js';
-import Projects from './projects.js'
+import Projects from './projects.js';
+import Services from './services.js';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <About/>
       <Skills/>
       <Projects/>
+      <Services/>
     </div>
   )
 }
