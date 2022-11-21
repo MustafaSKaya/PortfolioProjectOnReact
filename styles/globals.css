@@ -57,7 +57,7 @@ nav.styles-nav.stickyadd {
 
 nav.stickyadd .navbar-brand{
   color:#000;
-  font-size: 1.25rem;
+  font-size: 1.20rem;
   transition: .5s all;
 }
 
@@ -102,7 +102,7 @@ header {
 }
 
 .content-box h1 {
-  font-size: 3.25rem;
+  font-size: 3.20rem;
 }
 
 .content-box p {
@@ -135,7 +135,7 @@ header {
   display: inline-block;
   height: 2.75rem;
   width: 2.75rem;
-  font-size: 1.25rem;
+  font-size: 1.20rem;
   border-radius: 50%;
   border: 2px solid #d4d4d4;
   line-height: 2.75rem;
@@ -186,8 +186,8 @@ header {
 }*/
 
 .skills .progress {
-  height: 1.25rem;
-  border-radius: 1.25rem;
+  height: 1.20rem;
+  border-radius: 1.20rem;
   font-size: 0.7rem;
 }
 
@@ -197,7 +197,7 @@ header {
 }
 
 .skills label {
-    font-size: 1.25rem;
+    font-size: 1.20rem;
     margin: 0.7rem;
 }
 
@@ -264,6 +264,28 @@ header {
 
 .services p {
   font-size: 16px;
+}
+
+/* Recommendations Section */
+
+.recommendations .test-item {
+  max-width: 500px;
+  margin: 50px auto;
+}
+.recommendations .test-item .test-img {
+  width: 20rem;
+  height: 20rem;
+  object-fit: cover;
+}
+
+.recommendations .test-item .fa-quote-left {
+  width: 2rem;
+  height: 2rem;
+  color: grey;
+}
+
+.test-item p.test-name {
+  font-size: 11px;
 }
 
 @media (prefers-color-scheme: dark) {

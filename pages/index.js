@@ -7,6 +7,7 @@ import About from './about.js';
 import Skills from './skills.js';
 import Projects from './projects.js';
 import Services from './services.js';
+import Recommendations from './recommendations.js';
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <Skills/>
       <Projects/>
       <Services/>
+      <Recommendations/>
     </div>
   )
 }
