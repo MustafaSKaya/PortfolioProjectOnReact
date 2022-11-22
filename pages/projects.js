@@ -89,7 +89,7 @@ export default function projects() {
                     <div className="row filter-container mx-auto">
                         <AnimatePresence>
                         {filtered.map((project) => {
-                            return <motion.div layout initial={{ opacity: 0 }} animate={{ opacity:1 }} exit={{ opacity: 0 }} key={project.id}className="col-xs-6 col-sm-4 col-md-4 card-wrapper">
+                            return <motion.div layout initial={{ opacity: 0 }} animate={{ opacity:1 }} exit={{ opacity: 0 }} key={project.id} className="col-xs-6 col-sm-4 col-md-4 card-wrapper">
                             <Image src={project.imageURL} href="" className="img-fluid" alt=""></Image>
                             </motion.div>
                         })}

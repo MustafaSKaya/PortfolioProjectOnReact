@@ -288,6 +288,37 @@ header {
   font-size: 11px;
 }
 
+/* Contact Section */
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-inline .form-control {
+  display: inline-block;
+  width: auto;
+  vertical-align: middle;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.form-row > .col {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.contact .r-icon {
+  font-size: 50px;
+  text-align: center;
+}
+
+.message-area {
+  resize:none;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;
