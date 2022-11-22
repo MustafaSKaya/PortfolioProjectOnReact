@@ -319,6 +319,38 @@ header {
   resize:none;
 }
 
+/* Footer Section */
+
+footer {
+  height: 200px;
+  background-color: #333333;
+}
+footer .r-icon a {
+  font-size: 20px;
+  color: #848484;
+  padding: 1rem;
+  border: 1px solid #848484;
+  border-radius: 50%;
+}
+footer .r-icon a:hover {
+  border: 1px solid #eee;
+  color: #eee;
+  transition: 0.5s all;
+}
+
+.text-muted {
+  font-size:14px;
+}
+
+.list-inline-item .svg-inline--fa {
+  width: 20px;
+  height: 20px;
+}
+
+.footer-link-list {
+  padding: 0 !important;
+}
+
 @media (prefers-color-scheme: dark) {
   html {
     color-scheme: dark;

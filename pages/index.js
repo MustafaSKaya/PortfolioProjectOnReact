@@ -9,6 +9,7 @@ import Projects from './projects.js';
 import Services from './services.js';
 import Recommendations from './recommendations.js';
 import Contact from './contact.js';
+import Footer from './footer.js';
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
       <Services/>
       <Recommendations/>
       <Contact/>
+      <Footer/>
     </div>
   )
 }
