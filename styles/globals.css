@@ -47,6 +47,11 @@ p {
   z-index: 9999;
 }
 
+.spinner-wrapper.complete {
+  top: -100%;
+  bottom: -100%;
+}
+
 .spinner {
   position: absolute;
   left: 47.5%;
