@@ -29,7 +29,7 @@ export default function Header() {
                     <div className="col text-center">
                         <div className="content-box">
                             <h4>Hi</h4>
-                            <h1><span>I'm </span><span ref={element} className="element"></span></h1>
+                            <h1><span>I&apos;m </span><span ref={element} className="element"></span></h1>
                             <p><span></span></p>
                             <a href="#" className="btn">Download Resume</a>
                         </div>
