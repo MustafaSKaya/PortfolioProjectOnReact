@@ -3,7 +3,7 @@ import { faWindowRestore } from '@fortawesome/free-solid-svg-icons';
 import { faGear } from '@fortawesome/free-solid-svg-icons';
 import { faGlasses } from '@fortawesome/free-solid-svg-icons';
 
-export default function services() {
+export default function Services() {
     return (
         <section className="services bg-sec padding4section" id="services">
             <div className="container text-center">

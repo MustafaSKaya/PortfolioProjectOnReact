@@ -53,7 +53,7 @@ const temporaryProjectsArrayofObjects = [
 
 ]
 
-export default function projects() {
+export default function Projects() {
 
     const [filtered, setFiltered] = useState(temporaryProjectsArrayofObjects);
     const [activeFilter, setActiveFilter] = useState("All");

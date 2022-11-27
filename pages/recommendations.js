@@ -14,7 +14,7 @@ if (typeof window !== "undefined") {
     window.$ = window.jQuery = require("jquery");
 }
 
-export default function recommendations() {
+export default function Recommendations() {
     return (
         <section className="recommendations padding4section bg-sec" id="recommendations">
             <div className="container text-center">

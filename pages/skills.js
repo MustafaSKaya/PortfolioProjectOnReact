@@ -1,11 +1,11 @@
 import { Waypoint } from 'react-waypoint';
 import { useEffect, useState } from "react";
-import { faHtml5, faCss3Alt, faJs } from '@fortawesome/free-brands-svg-icons';
+import { faHtml5, faCss3Alt, faJs, faSass, faReact, faGithub, faPhp } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export default function skills() {
+export default function Skills() {
 
-    let [progressBars, setProgressBars] = useState(false);
+    /*let [progressBars, setProgressBars] = useState(false);
     let [htmlProgress, setHTMLProgress] = useState('90%');
     let [cssProgress, setCSSProgress] = useState('80%')
     let [jQueryProgress, setJQueryProgress] = useState('75%')
@@ -15,7 +15,7 @@ export default function skills() {
         setProgressBars(document.querySelectorAll('.progress-bar'));
     }, []);
 
-    //console.log(typeof progressBars);
+    console.log(typeof progressBars);
 
     const handleView = () => {
 
@@ -31,45 +31,47 @@ export default function skills() {
 
         Object.values(progressBars).forEach(element => element.style.width = "0%");
 
-    };
+    };*/
 
     return (
         <section className="skills mb-5" id="skills">
             <Waypoint
-                onEnter={handleView}
-                onLeave={handleOutOfView}
+                //onEnter={handleView}
+                //onLeave={handleOutOfView}
             />
             <div className="container">
                 <div className="row">
                     <div className="col-md-6 d-flex justify-content-center align-items-center">
-                        <h3>My Skills</h3>
+                        <h3>Languages, libraries, frameworks and various tools I worked with...</h3>
                     </div>
-                    <div className="col-md-6 mb-4">
-                        <label><FontAwesomeIcon icon={faHtml5} />HTML</label>
-                        <div className="progress">
-                            <div className="progress-bar html-bar" role="progressbar" aria-valuenow="0"
-                                aria-valuemin="0"
-                                aria-valuemax="100"
-                            >{htmlProgress}</div>
-                        </div>
-                        <label><FontAwesomeIcon icon={faCss3Alt} />CSS</label>
-                        <div className="progress">
-                            <div className="progress-bar css-bar" role="progressbar" aria-valuenow="0"
-                                aria-valuemin="0"
-                                aria-valuemax="100">{cssProgress}</div>
-                        </div>
-                        <label><div className="jQuery"></div>jQuery</label>
-                        <div className="progress">
-                            <div className="progress-bar jQuery-bar" role="progressbar" aria-valuenow="0"
-                                aria-valuemin="0"
-                                aria-valuemax="100">{jQueryProgress}</div>
-                        </div>
+                    <div className="col-md-6 techs mb-4">
+                        <label><FontAwesomeIcon icon={faHtml5} />HTML5</label>
+                        
+                        <label><FontAwesomeIcon icon={faCss3Alt} />CSS3</label>
+                        
                         <label><FontAwesomeIcon icon={faJs} />Javascript</label>
-                        <div className="progress">
-                            <div className="progress-bar js-bar" role="progressbar" aria-valuenow="0"
-                                aria-valuemin="0"
-                                aria-valuemax="100">{reactProgress}</div>
-                        </div>
+
+                        <label><FontAwesomeIcon icon={faReact} />React</label>
+
+                        <label><div className="jQuery logo"></div>jQuery</label>
+
+                        <label><div className="nextjs logo"></div>Next.js</label>
+
+                        <label><FontAwesomeIcon icon={faSass} />SASS</label>
+
+                        <label><FontAwesomeIcon icon={faGithub} />GitHb</label>
+                        
+                        <label><div className="postgresql logo"></div>PostgreSQL</label>
+
+                        <label><div className="jest logo"></div>JEST</label>
+                        
+                        <label><div className="cypress logo"></div>Cypress</label>
+                    
+                        <label><div className="ruby logo"></div>Ruby</label>
+
+                        <label><div className="rails logo"></div>Rails</label>
+
+                        <label><FontAwesomeIcon icon={faPhp} />PHP</label>
                     </div>
                 </div>
             </div>

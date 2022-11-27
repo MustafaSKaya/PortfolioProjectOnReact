@@ -4,7 +4,7 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-export default function footer() {
+export default function Footer() {
     return (
         <footer>
             <div className="container h-100 d-flex align-items-center justify-content-center">

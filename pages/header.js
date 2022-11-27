@@ -1,24 +1,33 @@
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
 
-export default function header() {
+export default function Header() {
 
-    const element = useRef(null);
+    const element1 = useRef(null);
+    const element2 = useRef(null);
 
     useEffect(() => {
-        const typed = new Typed(element.current, {
-            strings: ["Adam Adamson", "a Full-Stack Web Developer", "a Software Engineer", "your best employee candidate"], // Strings to display
-            // Speed settings, try diffrent values untill you get good results
-            startDelay: 300,
-            typeSpeed: 100,
+        const typed1 = new Typed(element1.current, {
+            strings: ["Googling throughout the day; still missing semicolons to my dismay."],
+            startDelay: 3500,
+            typeSpeed: 90,
             backSpeed: 100,
             backDelay: 100,
-            loop: true,
-            loopCount: Infinity
+            showCursor: false,
+        });
+
+        const typed2 = new Typed(element2.current, {
+            strings: ["Bulding applications with vision, creativity and proper amount of tears that not only looks and feels good but works good."],
+            startDelay: 12000,
+            typeSpeed: 65,
+            backSpeed: 100,
+            backDelay: 100,
+            showCursor: false,
         });
 
         return () => {
-            typed.destroy();
+            typed1.destroy();
+            typed2.destroy();
         };
     }, []);
 
@@ -28,10 +37,9 @@ export default function header() {
                 <div className="row">
                     <div className="col text-center">
                         <div className="content-box">
-                            <h4>Hi</h4>
-                            <h1><span>I'm </span><span ref={element} className="element"></span></h1>
-                            <p><span></span></p>
-                            <a href="#" className="btn">Download Resume</a>
+                            <h1><span ref={element1} className="element1"></span></h1>
+                            <p><span ref={element2} className="element2"></span></p>
+                            <a href="#" className="btn">Let's connect</a>
                         </div>
                     </div>
                 </div>
