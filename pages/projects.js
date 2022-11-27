@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import { useEffect, useState } from "react";
-import Project1Photo from '../pages/api/images/1.jpg';
-import Project2Photo from '../pages/api/images/2.jpg';
-import Project3Photo from '../pages/api/images/3.jpg';
-import Project4Photo from '../pages/api/images/4.jpg';
-import Project6Photo from '../pages/api/images/6.jpg';
+import Project1Photo from '../public/1.jpg';
+import Project2Photo from '../public/2.jpg';
+import Project3Photo from '../public/3.jpg';
+import Project4Photo from '../public/4.jpg';
+import Project6Photo from '../public/6.jpg';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const temporaryProjectsArrayofObjects = [
