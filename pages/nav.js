@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import clsx from 'clsx';
 import React, { useEffect, useState } from "react";
 
-export default function navigation() {
+export default function Navigation() {
 
     const [navBar, setNavBar] = useState(false);
 

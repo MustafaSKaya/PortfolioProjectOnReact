@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { faHtml5, faCss3Alt, faJs } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export default function skills() {
+export default function Skills() {
 
     let [progressBars, setProgressBars] = useState(false);
     let [htmlProgress, setHTMLProgress] = useState('90%');

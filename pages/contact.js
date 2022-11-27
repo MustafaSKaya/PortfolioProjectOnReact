@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMobileAlt, faEnvelope, faMapPin } from '@fortawesome/free-solid-svg-icons';
 
-export default function () {
+export default function Contact() {
     return (
         <section className="contact padding4section bg-sec" id="contact">
             <div className="container text-center">

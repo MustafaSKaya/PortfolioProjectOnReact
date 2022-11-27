@@ -1,7 +1,7 @@
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
 
-export default function header() {
+export default function Header() {
 
     const element = useRef(null);
 

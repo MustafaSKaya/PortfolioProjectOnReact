@@ -6,7 +6,7 @@ import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 
-export default function about() {
+export default function About() {
     return (
         <section className="about padding4section" id="about">
             <div className="container">
