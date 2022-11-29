@@ -160,7 +160,7 @@ header {
 }
 
 .content-box {
-  max-width: 700px;
+  max-width: 600px;
   color: #fff;
 }
 
@@ -197,7 +197,7 @@ header {
 /* About Section */
 
 .aboutCol {
-  padding: .5rem;
+  padding: 1.5rem;
   background-color: rgb(225, 225, 225);
   text-align: center;
   border: .5rem solid #fff;
@@ -210,7 +210,7 @@ header {
 
 .displayBottom {
   display: table-cell;
-  vertical-align: bottom
+  vertical-align: bottom;
 }
 
 .photoCol {
@@ -226,7 +226,13 @@ header {
 }
 
 .linkListCol {
+  display: table;
   background-color: rgb(246, 201, 118);
+}
+
+.displayMiddle {
+  display: table-cell;
+  vertical-align: middle;
 }
 
 .about .im-style {
@@ -238,51 +244,37 @@ header {
 
 .about li a {
   background-color: #fff;
-  color: #000;
+  color: rgb(160, 160, 160);
   display: inline-block;
-  height: 2.75rem;
-  width: 2.75rem;
+  height: 4rem;
+  width: 4rem;
   font-size: 1.20rem;
   border-radius: 50%;
-  border: 2px solid #000;
+  border: 2px solid rgb(160, 160, 160);
   line-height: 2.75rem;
   transition: 0.5s all;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items:center;
 }
 
-.about li a .fa-facebook-f {
+.about li a .svg-inline--fa {
+  height: 2rem;
+  width: 2rem;
   transition: 3s all;
 }
-
-.about li a .fa-facebook-f:hover {
-  color: #0E4399;
-  transition: 0.5s all;
-}
-
-.about li a .fa-twitter {
-  transition: 3s all;
-}
-
-.about li a .fa-twitter:hover {
-  color: #00BFFF;
-  transition: 0.5s all;
-}
-
-.about li a .fa-linkedin {
-  transition: 3s all;
-}
-
 .about li a .fa-linkedin:hover {
   color: #1E90FF;
   transition: 0.5s all;
 }
 
-.about li a .fa-github {
-  transition: 3s all;
+.about li a .fa-github:hover {
+  color: #000000;
+  transition: 0.5s all;
 }
 
-.about li a .fa-github:hover {
-  color: #808080;
+.about li a .fa-envelope:hover {
+  color: #e99300;
   transition: 0.5s all;
 }
 
