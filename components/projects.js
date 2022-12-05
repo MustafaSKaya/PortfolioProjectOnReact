@@ -12,7 +12,9 @@ const temporaryProjectsArrayofObjects = [
         id: 1,
         name: "Project1",
         imageURL: Project1Photo,
-        madeWith: ["Javascript", "React"]
+        madeWith: ["Javascript", "React"],
+        title:"",
+        description:"",
     },
     {
         id: 2,
@@ -88,15 +90,20 @@ export default function Projects() {
                 <motion.div layout className="container">
                     <div className="row filter-container mx-auto">
                         <AnimatePresence>
-                        {filtered.map((project) => {
-                            return <motion.div layout initial={{ opacity: 0 }} animate={{ opacity:1 }} exit={{ opacity: 0 }} key={project.id} className="col-xs-6 col-sm-4 col-md-4 card-wrapper">
-                            <Image src={project.imageURL} href="" className="img-fluid" alt=""></Image>
-                            </motion.div>
-                        })}
+                        {filtered.map((project) =><ProjectCard title={project.title}/>
+                        
+                       )}
                         </AnimatePresence>
                     </div>
                 </motion.div>
             </div>
         </section>
     )
+}
+
+const ProjectCard=()=>{
+
+    return <motion.div layout initial={{ opacity: 0 }} animate={{ opacity:1 }} exit={{ opacity: 0 }} key={project.id} className="col-xs-6 col-sm-4 col-md-4 card-wrapper">
+                            <Image src={project.imageURL} href="" className="img-fluid" alt=""></Image>
+                            </motion.div>
 }
