@@ -12,7 +12,9 @@ const temporaryProjectsArrayofObjects = [
         id: 1,
         name: "Project1",
         imageURL: Project1Photo,
-        madeWith: ["Javascript", "React"]
+        madeWith: ["Javascript", "React"],
+        title:"",
+        description:"",
     },
     {
         id: 2,
@@ -92,7 +94,8 @@ export default function Projects() {
                             return <motion.div layout initial={{ opacity: 0 }} animate={{ opacity:1 }} exit={{ opacity: 0 }} key={project.id} className="col-xs-6 col-sm-4 col-md-4 card-wrapper">
                             <Image src={project.imageURL} href="" className="img-fluid" alt=""></Image>
                             </motion.div>
-                        })}
+                        } 
+                       )}
                         </AnimatePresence>
                     </div>
                 </motion.div>

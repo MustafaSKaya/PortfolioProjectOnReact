@@ -23,7 +23,7 @@ export default function Navigation() {
     return (
         <nav className={navBar ? `navbar navbar-expand-lg sticky fixed-top styles-nav stickyadd` : `navbar navbar-expand-lg sticky fixed-top styles-nav`}>
             <div className="container">
-                <a href="#" className="navbar-brand">MyPortfolioProject</a>
+                <a href="#" className="navbar-brand">myPortfolioProject</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarId">
                     <span><FontAwesomeIcon className="hamburger" icon={faBars} /></span>
                 </button>
@@ -34,15 +34,6 @@ export default function Navigation() {
                         </li>
                         <li className="nav-item">
                             <a href="" className="nav-link">Skills</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="" className="nav-link">Services</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="" className="nav-link">Recommendations</a>
-                        </li>
-                        <li className="nav-item">
-                            <a href="" className="nav-link">Contact</a>
                         </li>
                     </ul>
                 </div>

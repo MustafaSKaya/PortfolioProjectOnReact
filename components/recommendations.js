@@ -26,7 +26,7 @@ export default function Recommendations() {
                 </div>
                 <div className="row">
                     <div className="col">
-                        <OwlCarousel className="owl-theme" items={1} autoplay={true} loop={true} >
+                        <OwlCarousel className="owl-theme" items={3} autoplay={true} loop={true} >
 
                             <div className="item">
                                 <div className="test-item text-center">

@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Source+Sans+Pro:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
 
 html,
 body {
@@ -91,13 +92,13 @@ p {
 
 nav.styles-nav {
   background: transparent;
-  padding: 2.0rem 0;
+  padding: 2rem 0;
   transition: .5s all;
 }
 
 nav .navbar-brand {
   font-size: 1.8rem;
-  color: #fff;
+  color: #fdd664;
   transition: .5s all;
 }
 
@@ -144,14 +145,14 @@ nav.stickyadd .hamburger {
 header {
   height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/6.jpg");
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("/8.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
 
 .header-content {
-  height: 100vh;
+  height: 110vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -159,7 +160,7 @@ header {
 }
 
 .content-box {
-  max-width: 700px;
+  max-width: 600px;
   color: #fff;
 }
 
@@ -168,11 +169,15 @@ header {
 }
 
 .content-box h1 {
-  font-size: 3.20rem;
+  font-family: 'Indie Flower', cursive;
+  font-weight: bold;
+  font-size: 3rem;
 }
 
 .content-box p {
+  font-family: 'Indie Flower', cursive;
   color: #FFFAF0;
+  font-size: 1.5rem;
 }
 
 .content-box a {
@@ -191,57 +196,85 @@ header {
 
 /* About Section */
 
+.aboutCol {
+  padding: 1.5rem;
+  background-color: rgb(225, 225, 225);
+  text-align: center;
+  border: .5rem solid #fff;
+}
+
+.nameCol {
+  display: table;
+  background-color: rgb(236, 209, 33);
+}
+
+.displayBottom {
+  display: table-cell;
+  vertical-align: bottom;
+}
+
+.photoCol {
+  padding: 0 !important;
+}
+
+.personalityCol {
+  background-color: rgb(243, 243, 243);
+}
+
+.rightRow {
+  padding: 0 !important;
+}
+
+.linkListCol {
+  display: table;
+  background-color: rgb(246, 201, 118);
+}
+
+.displayMiddle {
+  display: table-cell;
+  vertical-align: middle;
+}
+
 .about .im-style {
   width: 100%;
   height: 100%;
+  padding: 0 !important;
+  border: 0 !important;
 }
 
 .about li a {
-  color: #000;
+  background-color: #fff;
+  color: rgb(160, 160, 160);
   display: inline-block;
-  height: 2.75rem;
-  width: 2.75rem;
+  height: 4rem;
+  width: 4rem;
   font-size: 1.20rem;
   border-radius: 50%;
-  border: 2px solid #d4d4d4;
+  border: 2px solid rgb(160, 160, 160);
   line-height: 2.75rem;
   transition: 0.5s all;
-  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items:center;
 }
 
-.about li a .fa-facebook-f {
+.about li a .svg-inline--fa {
+  height: 2rem;
+  width: 2rem;
   transition: 3s all;
 }
-
-.about li a .fa-facebook-f:hover {
-  color: #0E4399;
-  transition: 0.5s all;
-}
-
-.about li a .fa-twitter {
-  transition: 3s all;
-}
-
-.about li a .fa-twitter:hover {
-  color: #00BFFF;
-  transition: 0.5s all;
-}
-
-.about li a .fa-linkedin {
-  transition: 3s all;
-}
-
 .about li a .fa-linkedin:hover {
   color: #1E90FF;
   transition: 0.5s all;
 }
 
-.about li a .fa-github {
-  transition: 3s all;
+.about li a .fa-github:hover {
+  color: #000000;
+  transition: 0.5s all;
 }
 
-.about li a .fa-github:hover {
-  color: #808080;
+.about li a .fa-envelope:hover {
+  color: #e99300;
   transition: 0.5s all;
 }
 
@@ -267,14 +300,84 @@ header {
     margin: 0.7rem;
 }
 
-.jQuery {
+.techs .svg-inline--fa {
+  width: 3rem;
+  height: 3rem;
+  transition: 3s all;
+}
+
+.skills .logo {
   display: inherit;
   flex-direction: row;
-  width: 1rem;
-  height: 1rem;
-  background-image: url("/jquery.png");
+  width: 3rem;
+  height: 3rem;
+  filter: grayscale(200%);
   background-size: cover;
   background-position: center;
+  transition: 3s all;
+}
+
+.jQuery {
+  background-image: url('/jquery.png');
+}
+
+.ruby {
+  background-image: url('/ruby.png');
+}
+
+.postgresql {
+  background-image: url('/postgresql.png');
+}
+
+.jest {
+  background-image: url('/jest.png');
+}
+
+.cypress {
+  background-image: url('/cypress.png');
+}
+
+.nextjs {
+  background-image: url('/nextjs.png');
+}
+
+.rails {
+  background-image: url('/rails.png');
+}
+
+.skills:hover .logo{
+  filter: grayscale(0%);
+  transition: .5s all;
+}
+
+.skills:hover .fa-html5{
+  color: #e44d26;
+  transition: .5s all;
+}
+
+.skills:hover .fa-css3-alt{
+  color: #264de4;
+  transition: .5s all;
+}
+
+.skills:hover .fa-js{
+  color: #f7e018;
+  transition: .5s all;
+}
+
+.skills:hover .fa-react{
+  color: #61dbfb;
+  transition: .5s all;
+}
+
+.skills:hover .fa-sass{
+  color: #ce679a;
+  transition: .5s all;
+}
+
+.skills:hover .fa-php{
+  color: #777bb3;
+  transition: .5s all;
 }
 
 /* Projects Section */
@@ -424,5 +527,41 @@ footer .r-icon a:hover {
   body {
     color: white;
     background: black;
+  }
+}
+
+@media (min-width: 200px) and (max-width: 800px) {
+  .content-box {
+    max-width: 500px;
+  }
+
+  .header-content {
+    max-width: 425px;
+  }
+
+  .content-box h1 {
+    font-size: 2rem;
+  }
+
+  .linkListCol {
+    height: auto !important;
+  }
+}
+
+@media (min-width: 800px) and (max-width: 990px) {
+  .content-box {
+    max-width: 500px;
+  }
+
+  .header-content {
+    max-width: 500px;
+  }
+
+  .content-box h1 {
+    font-size: 3.5rem;
+  }
+
+  .linkListCol {
+    height: auto !important;
   }
 }
