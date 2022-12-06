@@ -2,6 +2,14 @@ import { Waypoint } from 'react-waypoint';
 import { useEffect, useState } from "react";
 import { faHtml5, faCss3Alt, faJs, faSass, faReact, faGithub, faPhp } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import Image from 'next/image';
+import jQueryImg from '../public/jquery.png';
+import nextjsImg from '../public/nextjs.png';
+import postgrImg from '../public/postgresql.png';
+import jestImg from '../public/jest.png';
+import cypressImg from '../public/cypress.png';
+import rubyImg from '../public/ruby.png';
+import railsImg from '../public/rails.png'
 
 export default function Skills() {
 
@@ -36,42 +44,59 @@ export default function Skills() {
     return (
         <section className="skills mb-5" id="skills">
             <Waypoint
-                //onEnter={handleView}
-                //onLeave={handleOutOfView}
+            //onEnter={handleView}
+            //onLeave={handleOutOfView}
             />
             <div className="container">
                 <div className="row">
-                    <div className="col-md-6 d-flex justify-content-center align-items-center">
+                    <div className="col-lg-6 d-flex justify-content-center align-items-center">
                         <h3>Languages, libraries, frameworks and various tools I worked with...</h3>
                     </div>
-                    <div className="col-md-6 techs mb-4">
-                        <label><FontAwesomeIcon icon={faHtml5} />HTML5</label>
-                        
-                        <label><FontAwesomeIcon icon={faCss3Alt} />CSS3</label>
-                        
-                        <label><FontAwesomeIcon icon={faJs} />Javascript</label>
-
-                        <label><FontAwesomeIcon icon={faReact} />React</label>
-
-                        <label><div className="jQuery logo"></div>jQuery</label>
-
-                        <label><div className="nextjs logo"></div>Next.js</label>
-
-                        <label><FontAwesomeIcon icon={faSass} />SASS</label>
-
-                        <label><FontAwesomeIcon icon={faGithub} />GitHb</label>
-                        
-                        <label><div className="postgresql logo"></div>PostgreSQL</label>
-
-                        <label><div className="jest logo"></div>JEST</label>
-                        
-                        <label><div className="cypress logo"></div>Cypress</label>
-                    
-                        <label><div className="ruby logo"></div>Ruby</label>
-
-                        <label><div className="rails logo"></div>Rails</label>
-
-                        <label><FontAwesomeIcon icon={faPhp} />PHP</label>
+                    <div className="col-lg-6 techs mb-4">
+                        <div className="row">
+                            <div className='col-4'>
+                                <FontAwesomeIcon icon={faHtml5} /><label className='px-2'>HTML5</label>
+                            </div>
+                            <div className='col-4'>
+                                <FontAwesomeIcon icon={faCss3Alt} /><label className='px-2'>CSS3</label>
+                            </div>
+                            <div className='col-4'>
+                                <FontAwesomeIcon icon={faJs} /><label className='px-2'>Javascript</label>
+                            </div>
+                            <div className='col-4'>
+                                <FontAwesomeIcon icon={faReact} /><label className='px-2'>React</label>
+                            </div>
+                            <div className='col-4'>
+                                <Image src={jQueryImg} alt="jQuery" className="svg-inline--fa logo" /><label className='px-2'>jQuery</label>
+                            </div>
+                            <div className='col-4'>
+                                <Image src={nextjsImg} alt="next.js" className="svg-inline--fa logo" /><label className='px-2'>Nextjs</label>
+                            </div>
+                            <div className='col-4'>
+                                <FontAwesomeIcon icon={faSass} /><label className='px-2'>SASS</label>
+                            </div>
+                            <div className='col-4'>
+                                <Image src={postgrImg} alt="postgreSQL" className="svg-inline--fa logo" /><label className='px-2'>PostgreSQL</label>
+                            </div>
+                            <div className='col-4'>
+                                <FontAwesomeIcon icon={faGithub} /><label className='px-2'>GitHub</label>
+                            </div>
+                            <div className='col-4'>
+                                <Image src={jestImg} alt="JEST" className="svg-inline--fa logo" /><label className='px-2'>JEST</label>
+                            </div>
+                            <div className='col-4'>
+                                <Image src={cypressImg} alt="Cypress" className="svg-inline--fa logo" /><label className='px-2'>Cypress</label>
+                            </div>
+                            <div className='col-4'>
+                                <Image src={rubyImg} alt="Ruby" className="svg-inline--fa logo" /><label className='px-2'>Ruby</label>
+                            </div>
+                            <div className='col-4'>
+                                <Image src={railsImg} alt="Rails" className="svg-inline--fa logo" /><label className='px-2'>Rails</label>
+                            </div>
+                            <div className='col-4'>
+                                <FontAwesomeIcon icon={faPhp} /><label className='px-2'>PHP</label>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

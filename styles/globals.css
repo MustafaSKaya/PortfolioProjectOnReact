@@ -306,43 +306,9 @@ header {
   transition: 3s all;
 }
 
-.skills .logo {
-  display: inherit;
-  flex-direction: row;
-  width: 3rem;
-  height: 3rem;
-  filter: grayscale(200%);
-  background-size: cover;
-  background-position: center;
+.techs .logo {
+  filter: grayscale(100%);
   transition: 3s all;
-}
-
-.jQuery {
-  background-image: url('/jquery.png');
-}
-
-.ruby {
-  background-image: url('/ruby.png');
-}
-
-.postgresql {
-  background-image: url('/postgresql.png');
-}
-
-.jest {
-  background-image: url('/jest.png');
-}
-
-.cypress {
-  background-image: url('/cypress.png');
-}
-
-.nextjs {
-  background-image: url('/nextjs.png');
-}
-
-.rails {
-  background-image: url('/rails.png');
 }
 
 .skills:hover .logo{

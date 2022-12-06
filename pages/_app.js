@@ -12,7 +12,8 @@ function Loading() {
     if (typeof window === 'undefined') {
       setLoading(true);
     } else {
-      setTimeout(() => { setLoading(false) }, 3000)
+      setLoading(false);
+      //setTimeout(() => { setLoading(false) }, 3000)
     }
   }, []);
 
