@@ -9,7 +9,7 @@ export default function Header() {
     useEffect(() => {
         const typed1 = new Typed(element1.current, {
             strings: ["Googling throughout the day; still missing semicolons to my dismay."],
-            startDelay: 3500,
+            startDelay: 500,
             typeSpeed: 90,
             backSpeed: 100,
             backDelay: 100,
@@ -18,7 +18,7 @@ export default function Header() {
 
         const typed2 = new Typed(element2.current, {
             strings: ["Bulding applications with vision, creativity and proper amount of tears that not only looks and feels good but works good."],
-            startDelay: 12000,
+            startDelay: 9000,
             typeSpeed: 65,
             backSpeed: 100,
             backDelay: 100,

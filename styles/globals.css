@@ -296,8 +296,7 @@ header {
 }
 
 .skills label {
-    font-size: 1.20rem;
-    margin: 0.7rem;
+    margin-top: 1.25rem;
 }
 
 .techs .svg-inline--fa {
@@ -349,19 +348,43 @@ header {
 /* Projects Section */
 
 .projects .card-wrapper {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  position: relative;
+  padding: .5rem;
 }
 
-.btn-danger {
+.btn-outline-info {
   margin-right: .5rem;
   margin-left: .5rem;
 }
 
-.project-title {
-  background: #808080;
-  border-radius: 0 0 25px 25px;
-  opacity: 0.7;
+.img-fluid {
+  opacity: 1;
+  display: block;
+  height: auto;
+  transition: .5s ease-in-out;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease-in-out;
+}
+
+.card-wrapper:hover .img-fluid {
+  filter: brightness(0.2)
+}
+
+.card-wrapper:hover .overlay {
+  opacity: 1;
+  top: 30%;
+  bottom: 70%;
+  transition: .5s ease-in-out;
 }
 
 /* Services Section */
@@ -531,3 +554,5 @@ footer .r-icon a:hover {
     height: auto !important;
   }
 }
+
+

@@ -54,47 +54,61 @@ export default function Skills() {
                     </div>
                     <div className="col-lg-6 techs mb-4">
                         <div className="row">
-                            <div className='col-4'>
-                                <FontAwesomeIcon icon={faHtml5} /><label className='px-2'>HTML5</label>
+                            <div className='col-4 d-flex justify-content-start mt-3'>
+                                <FontAwesomeIcon icon={faHtml5} />
+                                <label className='px-3 fs-5'>HTML5</label>
                             </div>
-                            <div className='col-4'>
-                                <FontAwesomeIcon icon={faCss3Alt} /><label className='px-2'>CSS3</label>
+                            <div className='col-4 d-flex justify-content-start mt-3'>
+                                <FontAwesomeIcon icon={faCss3Alt} />
+                                <label className='px-3 fs-5'>CSS3</label>
                             </div>
-                            <div className='col-4'>
-                                <FontAwesomeIcon icon={faJs} /><label className='px-2'>Javascript</label>
+                            <div className='col-4 d-flex justify-content-start mt-3'>
+                                <FontAwesomeIcon icon={faJs} />
+                                <label className='px-3 fs-5'>Javascript</label>
                             </div>
-                            <div className='col-4'>
-                                <FontAwesomeIcon icon={faReact} /><label className='px-2'>React</label>
+                            <div className='col-4 d-flex justify-content-start mt-3'>
+                                <FontAwesomeIcon icon={faReact} />
+                                <label className='px-3 fs-5'>React</label>
                             </div>
-                            <div className='col-4'>
-                                <Image src={jQueryImg} alt="jQuery" className="svg-inline--fa logo" /><label className='px-2'>jQuery</label>
+                            <div className='col-4 d-flex justify-content-start mt-3'>
+                                <Image src={jQueryImg} alt="jQuery" className="svg-inline--fa logo" />
+                                <label className='px-3 fs-5'>jQuery</label>
                             </div>
-                            <div className='col-4'>
-                                <Image src={nextjsImg} alt="next.js" className="svg-inline--fa logo" /><label className='px-2'>Nextjs</label>
+                            <div className='col-4 d-flex justify-content-start mt-3'>
+                                <Image src={nextjsImg} alt="next.js" className="svg-inline--fa logo" />
+                                <label className='px-3 fs-5'>Nextjs</label>
                             </div>
-                            <div className='col-4'>
-                                <FontAwesomeIcon icon={faSass} /><label className='px-2'>SASS</label>
+                            <div className='col-4 d-flex justify-content-start mt-3'>
+                                <FontAwesomeIcon icon={faSass} />
+                                <label className='px-3 fs-5'>SASS</label>
                             </div>
-                            <div className='col-4'>
-                                <Image src={postgrImg} alt="postgreSQL" className="svg-inline--fa logo" /><label className='px-2'>PostgreSQL</label>
+                            <div className='col-4 d-flex justify-content-start mt-3'>
+                                <Image src={postgrImg} alt="postgreSQL" className="svg-inline--fa logo" />
+                                <label className='px-3 fs-5'>PostgreSQL</label>
                             </div>
-                            <div className='col-4'>
-                                <FontAwesomeIcon icon={faGithub} /><label className='px-2'>GitHub</label>
+                            <div className='col-4 d-flex justify-content-start mt-3'>
+                                <FontAwesomeIcon icon={faGithub} />
+                                <label className='px-3 fs-5'>GitHub</label>
                             </div>
-                            <div className='col-4'>
-                                <Image src={jestImg} alt="JEST" className="svg-inline--fa logo" /><label className='px-2'>JEST</label>
+                            <div className='col-4 d-flex justify-content-start mt-3'>
+                                <Image src={jestImg} alt="JEST" className="svg-inline--fa logo" />
+                                <label className='px-3 fs-5'>JEST</label>
                             </div>
-                            <div className='col-4'>
-                                <Image src={cypressImg} alt="Cypress" className="svg-inline--fa logo" /><label className='px-2'>Cypress</label>
+                            <div className='col-4 d-flex justify-content-start mt-3'>
+                                <Image src={cypressImg} alt="Cypress" className="svg-inline--fa logo" />
+                                <label className='px-3 fs-5'>Cypress</label>
                             </div>
-                            <div className='col-4'>
-                                <Image src={rubyImg} alt="Ruby" className="svg-inline--fa logo" /><label className='px-2'>Ruby</label>
+                            <div className='col-4 d-flex justify-content-start mt-3'>
+                                <Image src={rubyImg} alt="Ruby" className="svg-inline--fa logo" />
+                                <label className='px-3 fs-5'>Ruby</label>
                             </div>
-                            <div className='col-4'>
-                                <Image src={railsImg} alt="Rails" className="svg-inline--fa logo" /><label className='px-2'>Rails</label>
+                            <div className='col-4 d-flex justify-content-start mt-3'>
+                                <Image src={railsImg} alt="Rails" className="svg-inline--fa logo" />
+                                <label className='px-3 fs-5'>Rails</label>
                             </div>
-                            <div className='col-4'>
-                                <FontAwesomeIcon icon={faPhp} /><label className='px-2'>PHP</label>
+                            <div className='col-4 d-flex justify-content-start mt-3'>
+                                <FontAwesomeIcon icon={faPhp} />
+                                <label className='px-3 fs-5'>PHP</label>
                             </div>
                         </div>
                     </div>

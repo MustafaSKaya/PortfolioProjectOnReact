@@ -1,20 +1,19 @@
 import Image from 'next/image';
 import { useEffect, useState } from "react";
+import { motion, AnimatePresence } from 'framer-motion';
 import Project1Photo from '../public/1.jpg';
 import Project2Photo from '../public/2.jpg';
 import Project3Photo from '../public/3.jpg';
 import Project4Photo from '../public/4.jpg';
 import Project6Photo from '../public/6.jpg';
-import { motion, AnimatePresence } from 'framer-motion';
+import { redirect } from 'next/dist/server/api-utils';
 
 const temporaryProjectsArrayofObjects = [
     {
         id: 1,
         name: "Project1",
         imageURL: Project1Photo,
-        madeWith: ["Javascript", "React"],
-        title:"",
-        description:"",
+        madeWith: ["Javascript", "React"]
     },
     {
         id: 2,
@@ -80,19 +79,24 @@ export default function Projects() {
                 </div>
                 <div className="row">
                     <div className="col-12 mx-auto mb-5">
-                        <button onClick={()=> setActiveFilter("All")} className="btn btn-danger">All</button>
+                        <button onClick={()=> setActiveFilter("All")} className="btn btn-outline-info">All</button>
                         <button onClick={()=> setActiveFilter("jQuery")}
-                        className="btn btn-danger">jQuery/Javascript</button>
+                        className="btn btn-outline-info">jQuery/Javascript</button>
                         <button onClick={()=> setActiveFilter("React")}
-                        className="btn btn-danger">React/Javascript</button>
+                        className="btn btn-outline-info">React/Javascript</button>
                     </div>
                 </div>
                 <motion.div layout className="container">
-                    <div className="row filter-container mx-auto">
+                    <div className="row d-flex justify-content-evenly">
                         <AnimatePresence>
                         {filtered.map((project) => {
                             return <motion.div layout initial={{ opacity: 0 }} animate={{ opacity:1 }} exit={{ opacity: 0 }} key={project.id} className="col-xs-6 col-sm-4 col-md-4 card-wrapper">
                             <Image src={project.imageURL} href="" className="img-fluid" alt=""></Image>
+                            <div className="overlay">
+                                <h3>{project.name}</h3>
+                                <p>{project.madeWith}</p>
+                                <button className='btn btn-info'>Details</button>
+                            </div>
                             </motion.div>
                         } 
                        )}
