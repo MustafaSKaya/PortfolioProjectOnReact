@@ -6,6 +6,8 @@ import Project2Photo from '../public/2.jpg';
 import Project3Photo from '../public/3.jpg';
 import Project4Photo from '../public/4.jpg';
 import Project6Photo from '../public/6.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { redirect } from 'next/dist/server/api-utils';
 
 const temporaryProjectsArrayofObjects = [
@@ -64,6 +66,14 @@ export default function Projects() {
         setSelectedProject(false);
     };
 
+    const madeWithString = (array) => {
+        let str = '';
+        for (let i = 0; i < array.length; i++) {
+            str += "#" + array[i] + " ";
+        }
+        return str;
+    }
+
     //console.log("var mi?: ", selectedProject);
 
     useEffect(() => {
@@ -106,46 +116,44 @@ export default function Projects() {
                     <div className="row d-flex justify-content-evenly">
                         <AnimatePresence>
                             {filtered.map((project) => {
-                                return <motion.div layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} key={project.id} className="col-xs-6 col-sm-6 col-md-4 card-wrapper">
+                                return <motion.div layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} key={project.id} className="col-lg-4 col-md-6 col-sm-12 col-xs-12 card-wrapper">
                                     <Image src={project.imageURL} href="" className="img-fluid" alt=""></Image>
                                     <div className="overlay">
-                                        <h3>{project.name}</h3>
-                                        <p>{project.madeWith}</p>
+                                        <h3 className='projectTitle'>{project.name}</h3>
+                                        <p className='projectTechs'>{madeWithString(project.madeWith)}</p>
                                         <button onClick={() => { setSelectedProject(temporaryProjectsArrayofObjects[project.id]) }}
                                             className='btn btn-info'>Details</button>
-
                                     </div>
-
                                 </motion.div>
                             }
                             )}
-
                         </AnimatePresence>
                     </div>
                 </motion.div>
             </div>
             <AnimatePresence>
                 {selectedProject && (
-                    <motion.div layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 1 }} className="popUp">
+                    <motion.div layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="popUp">
                         <div onClick={togglePopUp} className="popUpOverlay"></div>
-                        <div className="popUpContent">
-                            <h2>{selectedProject.name}</h2>
-                            <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-                                perferendis suscipit officia recusandae, eveniet quaerat assumenda
-                                id fugit, dignissimos maxime non natus placeat illo iusto!
-                                Sapiente dolorum id maiores dolores? Illum pariatur possimus
-                                quaerat ipsum quos molestiae rem aspernatur dicta tenetur. Sunt
-                                placeat tempora vitae enim incidunt porro fuga ea.
-                            </p>
-                            <button className="closeButton" onClick={togglePopUp}>
-                                CLOSE
-                            </button>
+                        <div className="col-lg-5 col-md-7 popUpContent">
+                            <Image src={selectedProject.imageURL} href="" className="img-fluid" alt=""></Image>
+                            <div className='descriptionCont'>
+                                <h2 className='projectTitle'>{selectedProject.name}</h2>
+                                <p className='projectDesc'>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
+                                    perferendis suscipit officia recusandae, eveniet quaerat assumenda
+                                    id fugit, dignissimos maxime non natus placeat illo iusto!
+                                    Sapiente dolorum id maiores dolores? Illum pariatur possimus
+                                    quaerat ipsum quos molestiae rem aspernatur dicta tenetur. Sunt
+                                    placeat tempora vitae enim incidunt porro fuga ea.
+                                </p>
+                                <button className="btn btn-dark closeButton" onClick={togglePopUp}>X</button>
+                                <button className='btn btn-dark linkButton'><FontAwesomeIcon icon={faGithub} />GitHub Link</button>
+                            </div>
                         </div>
                     </motion.div>
                 )}
             </AnimatePresence>
         </section>
-
     )
 }

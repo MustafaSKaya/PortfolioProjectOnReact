@@ -164,7 +164,7 @@ nav.stickyadd .hamburger {
 header {
   height: 100vh;
   width: 100%;
-  background-image: linear-gradient(rgba(80, 80, 80, 0.5), rgba(80, 80, 80, 0.5)), url("/8.jpg");
+  background-image: linear-gradient(rgba(35, 35, 35, 0.5), rgba(35, 35, 35, 0.5)), url("/8.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -376,10 +376,14 @@ header {
   margin-left: .5rem;
 }
 
+.btn-outline-info:hover {
+  color: #fff;
+}
+
 .img-fluid {
   opacity: 1;
   display: block;
-  height: auto;
+  height: 100%;
   transition: .5s ease-in-out;
 }
 
@@ -395,6 +399,18 @@ header {
   transition: .5s ease-in-out;
 }
 
+.projectTitle {
+  color: #1E90FF;
+}
+
+.projectTechs {
+  color: #fff;
+}
+
+.overlay .btn-info {
+  color: #fff;
+}
+
 .card-wrapper:hover .img-fluid {
   filter: brightness(0.4)
 }
@@ -407,8 +423,6 @@ header {
 }
 
 .pop-up, .popUpOverlay {
-  width: 100vw;
-  height: 100vh;
   top: 0;
   left: 0;
   right: 0;
@@ -422,15 +436,17 @@ header {
 
 .popUpContent {
   position: fixed;
+  height: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   line-height: 1.4;
   background: #f1f1f1;
-  padding: 14px 28px;
   border-radius: 3px;
-  max-width: 60rem;
-  min-width: 40rem;
+}
+
+.descriptionCont {
+  padding: 1rem;
 }
 
 .closeButton {
@@ -438,6 +454,14 @@ header {
   top: 10px;
   right: 10px;
   padding: 5px 7px;
+}
+
+.linkButton {
+  padding: 0 .5rem 0 .5rem;
+}
+
+.linkButton .fa-github{
+  padding-right: .5rem; 
 }
 
 /* Services Section */
