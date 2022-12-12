@@ -17,7 +17,7 @@ export default function Services() {
                 </div>
                 <div className="row text-center way-fade-up">
                     <div className="col-lg-4">
-                        <div className="card">
+                        <div className="card cardPosition">
                             <div className="card-header">
                                 <FontAwesomeIcon className='icon' icon={faGear}/>
                             </div>
@@ -29,7 +29,7 @@ export default function Services() {
                         </div>
                     </div>
                     <div className="col-lg-4">
-                        <div className="card">
+                        <div className="card cardPosition">
                             <div className="card-header">
                                 <FontAwesomeIcon className='icon' icon={faWindowRestore} />
                             </div>
@@ -41,7 +41,7 @@ export default function Services() {
                         </div>
                     </div>
                     <div className="col-lg-4">
-                        <div className="card">
+                        <div className="card cardPosition">
                             <div className="card-header">
                                 <FontAwesomeIcon className='icon' icon={faGlasses} />
                             </div>

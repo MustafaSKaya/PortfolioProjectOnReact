@@ -33,16 +33,16 @@ export default function Header() {
 
     return (
         <header id="home">
-            <div className="container-fluid header-content">
+            <div className="container-fluid text-center header-content">
                 <div className="row">
-                    <div className="col text-center">
+                    <div className="col">
                         <div className="content-box">
                             <h1><span ref={element1} className="element1"></span></h1>
-                            <p><span ref={element2} className="element2"></span></p>
-                            <a href="#" className="btn">Let&apos;s connect</a>
+                            <p><span ref={element2} className="element2"></span></p>        
                         </div>
                     </div>
                 </div>
+                <a href="#" className="btn">Let&apos;s connect</a>
             </div>
         </header>
     )

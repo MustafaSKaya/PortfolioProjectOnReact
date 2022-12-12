@@ -1,10 +1,10 @@
 import Image from 'next/image';
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
-import Project1Photo from '../public/1.jpg';
+import Project1Photo from '../public/image.jpg';
 import Project2Photo from '../public/2.jpg';
 import Project3Photo from '../public/3.jpg';
-import Project4Photo from '../public/4.jpg';
+import Project4Photo from '../public/1.gif';
 import Project6Photo from '../public/6.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
@@ -14,43 +14,50 @@ const temporaryProjectsArrayofObjects = [
     {
         id: 0,
         name: "Project1",
-        imageURL: Project1Photo,
+        imageURL: Project4Photo,
+        popUpImg: Project1Photo,
         madeWith: ["Javascript", "React"]
     },
     {
         id: 1,
         name: "Project2",
-        imageURL: Project2Photo,
+        imageURL: Project4Photo,
+        popUpImg: Project1Photo,
         madeWith: ["Javascript", "jQuery"]
     },
     {
         id: 2,
         name: "Project3",
-        imageURL: Project3Photo,
+        imageURL: Project4Photo,
+        popUpImg: Project1Photo,
         madeWith: ["Javascript", "React"]
     },
     {
         id: 3,
         name: "Project4",
         imageURL: Project4Photo,
+        popUpImg: Project1Photo,
         madeWith: ["Javascript", "React"]
     },
     {
         id: 4,
         name: "Project6",
-        imageURL: Project6Photo,
+        imageURL: Project4Photo,
+        popUpImg: Project1Photo,
         madeWith: ["Javascript", "jQuery"]
     },
     {
         id: 5,
         name: "Project7",
-        imageURL: Project1Photo,
+        imageURL: Project4Photo,
+        popUpImg: Project1Photo,
         madeWith: ["Javascript", "jQuery"]
     },
     {
         id: 6,
         name: "Project8",
-        imageURL: Project2Photo,
+        imageURL: Project4Photo,
+        popUpImg: Project1Photo,
         madeWith: ["Javascript", "React"]
     }
 
@@ -78,7 +85,8 @@ export default function Projects() {
 
     useEffect(() => {
         if (selectedProject) {
-            document.body.classList.add('active-popUp')
+            document.body.classList.add('active-popUp');
+            console.log(document);
         } else {
             document.body.classList.remove('active-popUp')
         }
@@ -104,12 +112,12 @@ export default function Projects() {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-12 mx-auto mb-5">
-                        <button onClick={() => setActiveFilter("All")} className="btn btn-outline-info">All</button>
+                    <div className="col-12 mx-auto mb-3">
+                        <button onClick={() => setActiveFilter("All")} className="btn btn-outline-info my-1">All</button>
                         <button onClick={() => setActiveFilter("jQuery")}
-                            className="btn btn-outline-info">jQuery/Javascript</button>
+                        className="btn btn-outline-info my-1">jQuery/Javascript</button>
                         <button onClick={() => setActiveFilter("React")}
-                            className="btn btn-outline-info">React/Javascript</button>
+                        className="btn btn-outline-info my-1">React/Javascript</button>
                     </div>
                 </div>
                 <motion.div layout className="container">
@@ -120,9 +128,8 @@ export default function Projects() {
                                     <Image src={project.imageURL} href="" className="img-fluid" alt=""></Image>
                                     <div className="overlay">
                                         <h3 className='projectTitle'>{project.name}</h3>
-                                        <p className='projectTechs'>{madeWithString(project.madeWith)}</p>
                                         <button onClick={() => { setSelectedProject(temporaryProjectsArrayofObjects[project.id]) }}
-                                            className='btn btn-info'>Details</button>
+                                            className='btn btn-info my-1'>More Details</button>
                                     </div>
                                 </motion.div>
                             }
@@ -135,10 +142,14 @@ export default function Projects() {
                 {selectedProject && (
                     <motion.div layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="popUp">
                         <div onClick={togglePopUp} className="popUpOverlay"></div>
-                        <div className="col-lg-5 col-md-7 popUpContent">
-                            <Image src={selectedProject.imageURL} href="" className="img-fluid" alt=""></Image>
+                        <div className="col-lg-6 col-md-7 col-sm-8 col-9 popUpContent">
+                            <div className='picContainer'>
+                                <Image src={selectedProject.popUpImg} href="" className="popUpImg" alt=""></Image>
+                            </div>
                             <div className='descriptionCont'>
                                 <h2 className='projectTitle'>{selectedProject.name}</h2>
+                                <p className='projectTechs'>{madeWithString(selectedProject.madeWith)}</p>
+                                <div className='project-border'></div>
                                 <p className='projectDesc'>
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
                                     perferendis suscipit officia recusandae, eveniet quaerat assumenda

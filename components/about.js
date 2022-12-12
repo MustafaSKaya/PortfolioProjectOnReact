@@ -66,19 +66,19 @@ export default function About() {
                                     transition={inView12 ? { duration: .75, delay: aDelay*4 } : ''} className='col-4 aboutCol'>
                                     <motion.div ref={ref14} initial={{ opacity: 0 }}
                                         animate={inView14 ? { opacity: 1 } : ''}
-                                        transition={inView14 ? { duration: 1, delay: aDelay*4.5 } : ''}>
+                                        transition={inView14 ? { duration: 1, delay: aDelay*4.5 } : ''} className="text-break">
                                         <h2>Persistent</h2>
                                         <p>Lorem ipsum dolor sit amet, consectetur</p>
                                     </motion.div>
                                     <motion.div ref={ref15} initial={{ opacity: 0 }}
                                         animate={inView15 ? { opacity: 1 } : ''}
-                                        transition={inView15 ? { duration: 1, delay: aDelay*5 } : ''}>
+                                        transition={inView15 ? { duration: 1, delay: aDelay*5 } : ''} className="text-break">
                                         <h2>Hard-working</h2>
                                         <p>Lorem ipsum dolor sit amet, consectetur</p>
                                     </motion.div>
                                     <motion.div ref={ref16} initial={{ opacity: 0 }}
                                         animate={inView16 ? { opacity: 1 } : ''}
-                                        transition={inView16 ? { duration: 1, delay: aDelay*5.5 } : ''}>
+                                        transition={inView16 ? { duration: 1, delay: aDelay*5.5 } : ''} className="text-break">
                                         <h2>Blablabla</h2>
                                         <p>Lorem ipsum dolor sit amet, consectetur</p>
                                     </motion.div>
