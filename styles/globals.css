@@ -200,6 +200,8 @@ header {
 }
 
 .header-content a {
+  position: absolute;
+  bottom: 7rem;
   color: #fff;
   text-decoration: none;
   border: 2px solid #fff;
@@ -207,7 +209,7 @@ header {
   padding: 5px 25px;
 }
 
-.content-box a:hover {
+.header-content a:hover {
   color: #000;
   background: #fff;
   transition: .5s all;
@@ -632,7 +634,7 @@ footer .r-icon a:hover {
   }
 }
 
-@media (min-width: 200px) and (max-width: 800px) {
+@media (min-width: 200px) and (max-width: 767px) {
   p {
     font-family: "Source Sans Pro", sans-serif;
     font-size: .75rem;
@@ -641,7 +643,7 @@ footer .r-icon a:hover {
   }
 
   h1,h2,h3,h4,h5,h6 {
-    font-size: 1rem !important;
+    font-size: 1rem;
     font-family: "Roboto Condensed", sans-serif;
   }
 
@@ -649,28 +651,32 @@ footer .r-icon a:hover {
     font-size: 1.5rem;
   }
 
+  nav .navbar-brand {
+    font-size: 1.5rem;
+  }
+
+  nav.styles-nav {
+    padding: 1.5rem 0;
+  }
+
   .content-box {
     position: relative;
     height: 35vh;
-    max-width: 90vw;
-  }
-
-  .content-box p {
-    line-height: 1.25rem !important;
-    font-size: 1.55rem;
+    max-width: 80vw;
   }
 
   .content-box .element1 {
     font-size: 1.75rem;
   }
 
-  .header-content {
-    max-width: 425px;
+  .content-box .element2 {
+    line-height: 1.25rem;
+    font-size: 1.25rem;
   }
 
   .header-content a {
     position: absolute;
-    bottom: 20vh;
+    bottom: 7rem;
   }
 
   .content-box h1 {
@@ -699,21 +705,26 @@ footer .r-icon a:hover {
   label {
     font-size: .8rem !important;
   }
+
+  .projectTitle {
+    font-size: 1.5rem;
+  }
+
+  .popUpContent {
+    height: 75vh;
+  }
+
+  .picContainer {
+    height: 50%;
+  }
+
+  .recommendations .test-item .test-img {
+    width: 15rem;
+    height: 15rem;
+  }
 }
 
-@media (min-width: 800px) and (max-width: 990px) {
-  p {
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: 1.5rem !important;
-    line-height: 1.25rem;
-    color: #505c66;
-  }
-
-  h1,h2,h3,h4,h5,h6 {
-    font-size: 2rem !important;
-    font-family: "Roboto Condensed", sans-serif;
-  }
-
+@media (min-width: 768px) and (max-width: 992px) {
   nav .navbar-brand {
     font-size: 1.5rem;
   }
@@ -721,20 +732,12 @@ footer .r-icon a:hover {
   .content-box {
     position: relative;
     height: 35vh;
-    max-width: 90vw;
-  }
-
-  .header-content {
-    max-width: 425px;
+    max-width: 75vw;
   }
 
   .header-content a {
     position: absolute;
-    bottom: 20vh;
-  }
-
-  .content-box h1 {
-    font-size: 2rem;
+    bottom: 12rem;
   }
 
   .aboutCol {

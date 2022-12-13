@@ -42,10 +42,10 @@ export default function Contact() {
                     <div className="col">
                         <form>
                             <div className="form-row way-fade-left">
-                                <div className="form-group col-md-6">
+                                <div className="form-group col-md-6 col-12">
                                     <input type="text" className="form-control" placeholder="Name" />
                                 </div>
-                                <div className="form-group col-md-6">
+                                <div className="form-group col-md-6 col-12">
                                     <input type="email" className="form-control" placeholder="Email" />
                                 </div>
                             </div>

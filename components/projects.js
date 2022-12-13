@@ -142,7 +142,7 @@ export default function Projects() {
                 {selectedProject && (
                     <motion.div layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} className="popUp">
                         <div onClick={togglePopUp} className="popUpOverlay"></div>
-                        <div className="col-lg-6 col-md-7 col-sm-8 col-9 popUpContent">
+                        <div className="col-lg-6 col-md-7 col-sm-8 col-11 popUpContent">
                             <div className='picContainer'>
                                 <Image src={selectedProject.popUpImg} href="" className="popUpImg" alt=""></Image>
                             </div>

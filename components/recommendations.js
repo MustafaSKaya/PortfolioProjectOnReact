@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
 import profilePhoto from '../public/1.jpg';
@@ -15,6 +16,30 @@ if (typeof window !== "undefined") {
 }
 
 export default function Recommendations() {
+
+    const [amountOfReco, setAmountOfReco] = useState();
+    const [windowWidth, setWindowWidth] = useState();
+
+    useEffect(() => {
+        let cb = function () {
+            setWindowWidth(window.innerWidth);
+          };
+        window.addEventListener("resize", cb);
+        if (windowWidth <= 768) {
+            console.log('yeha')
+            setAmountOfReco(1);
+            return
+        } else if (windowWidth >= 769 && windowWidth <= 992) {
+            console.log('yes')
+            setAmountOfReco(2);
+            return
+        } else {
+            setAmountOfReco(3);
+            return
+        };
+
+    }, [windowWidth]);
+
     return (
         <section className="recommendations padding4section bg-sec" id="recommendations">
             <div className="container text-center">
@@ -26,7 +51,7 @@ export default function Recommendations() {
                 </div>
                 <div className="row">
                     <div className="col">
-                        <OwlCarousel className="owl-theme" items={3} autoplay={true} loop={true} >
+                        <OwlCarousel className="owl-theme" items={amountOfReco} autoplay={true} loop={true} >
 
                             <div className="item">
                                 <div className="test-item text-center">
@@ -64,12 +89,12 @@ export default function Recommendations() {
                                 </div>
                             </div>
 
-                    </OwlCarousel>
+                        </OwlCarousel>
 
 
+                    </div>
                 </div>
             </div>
-        </div>
         </section >
     )
 }
