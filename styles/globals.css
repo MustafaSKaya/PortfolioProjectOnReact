@@ -644,20 +644,20 @@ footer .r-icon a:hover {
 
 @media (min-width: 200px) and (max-width: 767px) {
   p {
-    font-size: 3.2vw;
+    font-size: 2.4vw;
     line-height: 1rem;
   }
 
   h1 {
-    font-size: 6vw;
-  }
-
-  h2 {
     font-size: 5.2vw;
   }
 
+  h2 {
+    font-size: 3.6vw;
+  }
+
   h3,h4,h5,h6 {
-    font-size: 4.2vw;
+    font-size: 3.2vw;
   }
 
   label {
@@ -671,6 +671,10 @@ footer .r-icon a:hover {
   nav.styles-nav {
     padding: 1.5rem 0;
   }
+
+  nav .navbar-nav li a {
+    font-size: 3.6vw;
+}
 
   .content-box {
     position: relative;
@@ -719,6 +723,7 @@ footer .r-icon a:hover {
   }
 
   .btn {
+    padding: 1vw;
     font-size: 2vw;
   }
 
@@ -727,15 +732,15 @@ footer .r-icon a:hover {
   }
 
   .popUpContent {
-    height: 65vh;
+    height: auto;
   }
 
   .picContainer {
-    height: 45%;
+    height: 32.5vh;
   }
 
   .popUpImg {
-    height: 59vh;
+    height: 100vh;
   }
 
   .recommendations .test-item .test-img {
