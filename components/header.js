@@ -34,7 +34,7 @@ export default function Header() {
     return (
         <header id="home">
             <div className="container-fluid text-center header-content">
-                <div className="row">
+                <div className="row headerRow">
                     <div className="col">
                         <div className="content-box">
                             <h1><span ref={element1} className="element1"></span></h1>

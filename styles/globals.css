@@ -42,7 +42,7 @@ h1,h2,h3,h4,h5,h6 {
 
 p {
   font-family: "Source Sans Pro", sans-serif;
-  font-size: 1.25rem;
+  font-size: 1vw;
   line-height: 1.8rem;
   color: #505c66;
 }
@@ -117,13 +117,14 @@ nav.styles-nav {
 
 nav .navbar-brand {
   font-size: 1.8rem;
+  font-weight: 500;
   color: #fdd664;
   transition: .5s all;
 }
 
 nav .navbar-nav li a {
   color: rgba(255,255,255,0.8) !important;
-  font-size: 1rem;
+  font-size: 1vw;
   letter-spacing: 0.05em;
   font-weight: 600;
   font-family: "Roboto Condensed", sans-serif;
@@ -178,8 +179,13 @@ header {
   align-items: center;
 }
 
+.headerRow {
+  height: 35vh;
+}
+
 .content-box {
-  max-width: 600px;
+  width: 35vw;
+  height: 35vh;
   color: #fff;
 }
 
@@ -187,21 +193,23 @@ header {
   font-size: 1.9rem;
 }
 
-.content-box h1 {
+.element1 {
   font-family: 'Indie Flower', cursive;
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2.4vw;
+  line-height: 7vh;
 }
 
-.content-box p {
+.element2 {
   font-family: 'Indie Flower', cursive;
   color: #FFFAF0;
-  font-size: 1.5rem;
+  font-size: 1.6vw;
+  line-height: 4vh;
 }
 
 .header-content a {
-  position: absolute;
-  bottom: 7rem;
+  position: relative;
+  top: 10vh;
   color: #fff;
   text-decoration: none;
   border: 2px solid #fff;
@@ -636,23 +644,28 @@ footer .r-icon a:hover {
 
 @media (min-width: 200px) and (max-width: 767px) {
   p {
-    font-family: "Source Sans Pro", sans-serif;
-    font-size: .75rem;
+    font-size: 3.2vw;
     line-height: 1rem;
-    color: #505c66;
   }
 
-  h1,h2,h3,h4,h5,h6 {
-    font-size: 1rem;
-    font-family: "Roboto Condensed", sans-serif;
+  h1 {
+    font-size: 6vw;
+  }
+
+  h2 {
+    font-size: 5.2vw;
+  }
+
+  h3,h4,h5,h6 {
+    font-size: 4.2vw;
+  }
+
+  label {
+    font-size: 3.6vw !important;
   }
 
   nav .navbar-brand {
-    font-size: 1.5rem;
-  }
-
-  nav .navbar-brand {
-    font-size: 1.5rem;
+    font-size: 5.6vw;
   }
 
   nav.styles-nav {
@@ -661,30 +674,28 @@ footer .r-icon a:hover {
 
   .content-box {
     position: relative;
+    top: 6.5vh;
+    width: 75vw;
     height: 35vh;
-    max-width: 80vw;
-  }
+    color: #fff;
+}
 
   .content-box .element1 {
-    font-size: 1.75rem;
+    line-height: 32px;
+    font-size: 6vw;
   }
 
   .content-box .element2 {
-    line-height: 1.25rem;
-    font-size: 1.25rem;
+    line-height: 10px;
+    font-size: 4vw;
   }
 
   .header-content a {
-    position: absolute;
-    bottom: 7rem;
-  }
-
-  .content-box h1 {
-    font-size: 2rem;
+    top: 6.5vh;
   }
 
   .aboutCol {
-    padding: .5rem;
+    padding: 3.2vw;
   }
 
   .about li a {
@@ -696,14 +707,19 @@ footer .r-icon a:hover {
     height: 1.2rem;
     width: 1.2rem;
     transition: 3s all;
-}
+ }
 
   .linkListCol {
     height: auto !important;
   }
 
-  label {
-    font-size: .8rem !important;
+  .techs .svg-inline--fa {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+
+  .btn {
+    font-size: 2vw;
   }
 
   .projectTitle {
@@ -711,11 +727,15 @@ footer .r-icon a:hover {
   }
 
   .popUpContent {
-    height: 75vh;
+    height: 65vh;
   }
 
   .picContainer {
-    height: 50%;
+    height: 45%;
+  }
+
+  .popUpImg {
+    height: 59vh;
   }
 
   .recommendations .test-item .test-img {
@@ -725,42 +745,87 @@ footer .r-icon a:hover {
 }
 
 @media (min-width: 768px) and (max-width: 992px) {
+  p {
+    font-family: "Source Sans Pro", sans-serif;
+    font-size: 2vw;
+    line-height: 1rem;
+    color: #505c66;
+  }
+
+  h1,h2 {
+    font-size: 4vw;
+  }
+
+  h3,h4,h5,h6 {
+    font-size: 3vw;
+  }
+
+  label {
+    font-size: 5vw;
+    line-height: 1rem;
+  }
+
   nav .navbar-brand {
-    font-size: 1.5rem;
+    font-size: 3vw;
   }
 
   .content-box {
     position: relative;
-    height: 35vh;
-    max-width: 75vw;
+    top: 6.5vh;
   }
 
-  .header-content a {
-    position: absolute;
-    bottom: 12rem;
+  .element1 {
+    font-family: 'Indie Flower', cursive;
+    font-weight: bold;
+    font-size: 3vw;
+    line-height: 1.5vh;
+  }
+  
+  .element2 {
+    font-family: 'Indie Flower', cursive;
+    color: #FFFAF0;
+    font-size: 2vw;
+    line-height: .5vh;
   }
 
   .aboutCol {
-    padding: .5rem;
+    padding: 2.4vw;
   }
 
   .about li a {
-    height: 2rem;
-    width: 2rem;
+    height: 5vw;
+    width: 5vw;
   }
 
   .about li a .svg-inline--fa {
-    height: 1.2rem;
-    width: 1.2rem;
+    height: 3vw;
+    width: 3vw;
     transition: 3s all;
-}
+  }
 
   .linkListCol {
     height: auto !important;
   }
 
-  label {
-    font-size: .8rem !important;
+  .popUpContent {
+    height: 65%;
+  }
+
+  .picContainer {
+    height: 45%;
+  }
+
+  .popUpImg {
+    height: 59vh;
+  }
+
+  .servicesDesc {
+    padding: 0 3vw;
+  }
+
+  .recommendations .test-item .test-img {
+    width: 15rem;
+    height: 15rem;
   }
 }
 

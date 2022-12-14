@@ -67,19 +67,19 @@ export default function About() {
                                     <motion.div ref={ref14} initial={{ opacity: 0 }}
                                         animate={inView14 ? { opacity: 1 } : ''}
                                         transition={inView14 ? { duration: 1, delay: aDelay*4.5 } : ''} className="text-break">
-                                        <h2>Persistent</h2>
+                                        <h3>Persistent</h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur</p>
                                     </motion.div>
                                     <motion.div ref={ref15} initial={{ opacity: 0 }}
                                         animate={inView15 ? { opacity: 1 } : ''}
                                         transition={inView15 ? { duration: 1, delay: aDelay*5 } : ''} className="text-break">
-                                        <h2>Hard-working</h2>
+                                        <h3>Hard-working</h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur</p>
                                     </motion.div>
                                     <motion.div ref={ref16} initial={{ opacity: 0 }}
                                         animate={inView16 ? { opacity: 1 } : ''}
                                         transition={inView16 ? { duration: 1, delay: aDelay*5.5 } : ''} className="text-break">
-                                        <h2>Blablabla</h2>
+                                        <h3>Blablabla</h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur</p>
                                     </motion.div>
                                 </motion.div>

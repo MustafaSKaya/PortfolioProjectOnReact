@@ -22,7 +22,7 @@ export default function Navigation() {
 
     return (
         <nav className={navBar ? `navbar navbar-expand-lg sticky fixed-top styles-nav stickyadd` : `navbar navbar-expand-lg sticky fixed-top styles-nav`}>
-            <div className="container">
+            <div className="navContainer container">
                 <a href="#" className="navbar-brand">myPortfolioProject</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarId">
                     <span><FontAwesomeIcon className="hamburger" icon={faBars} /></span>

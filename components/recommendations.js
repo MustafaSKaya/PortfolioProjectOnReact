@@ -26,11 +26,9 @@ export default function Recommendations() {
           };
         window.addEventListener("resize", cb);
         if (windowWidth <= 768) {
-            console.log('yeha')
             setAmountOfReco(1);
             return
         } else if (windowWidth >= 769 && windowWidth <= 992) {
-            console.log('yes')
             setAmountOfReco(2);
             return
         } else {
@@ -57,7 +55,7 @@ export default function Recommendations() {
                                 <div className="test-item text-center">
                                     <FontAwesomeIcon icon={faQuoteLeft} />
                                     <div><Image src={profilePhoto} className="mx-auto rounded-circle test-img" alt="#"></Image></div>
-                                    <p className="text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore fugiat quidem hic dicta incidunt.</p>
+                                    <p className="text-muted font-italic mt-3 px-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore fugiat quidem hic dicta incidunt.</p>
                                     <p className="test-name">Jessi Walter, Ceo Murno.com</p>
                                 </div>
                             </div>
@@ -66,7 +64,7 @@ export default function Recommendations() {
                                 <div className="test-item text-center">
                                     <FontAwesomeIcon icon={faQuoteLeft} />
                                     <div><Image src={profilePhoto} className="mx-auto rounded-circle test-img" alt="#"></Image></div>
-                                    <p className="text-muted font-italic mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore fugiat quidem hic dicta incidunt.</p>
+                                    <p className="text-muted font-italic mt-3 px-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore fugiat quidem hic dicta incidunt.</p>
                                     <p className="test-name">Caron Smith, Ceo Lopra.com</p>
                                 </div>
                             </div>
@@ -75,7 +73,7 @@ export default function Recommendations() {
                                 <div className="test-item text-center">
                                     <FontAwesomeIcon icon={faQuoteLeft} />
                                     <div><Image src={profilePhoto} className="mx-auto rounded-circle test-img" alt="#"></Image></div>
-                                    <p className="text-muted font-italic">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore fugiat quidem hic dicta incidunt.</p>
+                                    <p className="text-muted font-italic mt-3 px-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore fugiat quidem hic dicta incidunt.</p>
                                     <p className="test-name">Alan Harper, Ceo thm.com</p>
                                 </div>
                             </div>
@@ -84,7 +82,7 @@ export default function Recommendations() {
                                 <div className="test-item text-center">
                                     <FontAwesomeIcon icon={faQuoteLeft} />
                                     <div><Image src={profilePhoto} className="mx-auto rounded-circle test-img" alt="#"></Image></div>
-                                    <p className="text-muted font-italic mt-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore fugiat quidem hic dicta incidunt.</p>
+                                    <p className="text-muted font-italic mt-3 px-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore fugiat quidem hic dicta incidunt.</p>
                                     <p className="test-name">Jessi Walter, Ceo Murno.com</p>
                                 </div>
                             </div>
