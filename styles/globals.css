@@ -644,20 +644,20 @@ footer .r-icon a:hover {
 
 @media (min-width: 200px) and (max-width: 767px) {
   p {
-    font-size: 2.4vw;
+    font-size: 2.4vw !important;
     line-height: 1rem;
   }
 
   h1 {
-    font-size: 5.2vw;
+    font-size: 5.2vw !important;
   }
 
   h2 {
-    font-size: 3.6vw;
+    font-size: 3.6vw !important;
   }
 
   h3,h4,h5,h6 {
-    font-size: 3.2vw;
+    font-size: 3.2vw !important;
   }
 
   label {
