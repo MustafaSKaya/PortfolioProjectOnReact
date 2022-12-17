@@ -645,8 +645,8 @@ footer .r-icon a:hover {
 @media (min-width: 200px) and (max-width: 767px) {
   p {
     font-size: 2.8vw !important;
-    line-height: 1rem;
-    margin-bottom: 0;
+    line-height: .8rem !important; 
+    margin-bottom: 0 !important;
   }
 
   h1 {
@@ -658,7 +658,12 @@ footer .r-icon a:hover {
     margin-bottom: 0;
   }
 
-  h3,h4,h5,h6 {
+  h3 {
+    font-size: 3.6vw !important;
+    margin: .5rem 0;
+  }
+
+  h4,h5,h6 {
     font-size: 3.6vw !important;
     margin-bottom: 0;
   }

@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
-import Project1Photo from '../public/image.jpg';
 import Project2Photo from '../public/LHLMidtermPopUp.png';
 import Project3Photo from '../public/LHLMidtermThumbnail.png';
 import Project4Photo from '../public/HeyNeighboursThumbnail.gif';
@@ -10,6 +9,10 @@ import Project7Photo from '../public/InterviewSchedulerThumbnail.jpg';
 import Project8Photo from '../public/InterviewSchedulerPopUp.jpg';
 import Project9Photo from '../public/MyTweeterThumbnail.jpg';
 import Project10Photo from '../public/MyTweeterPopUp.jpg';
+import Project11Photo from '../public/JungleThumbnail.jpg';
+import Project12Photo from '../public/JunglePopUp.jpg';
+import Project13Photo from '../public/TinyAppThumbnail.jpg';
+import Project14Photo from '../public/TinyAppPopUp.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { redirect } from 'next/dist/server/api-utils';
@@ -27,14 +30,14 @@ const temporaryProjectsArrayofObjects = [
         name: "ToDo List",
         imageURL: Project3Photo,
         popUpImg: Project2Photo,
-        madeWith: ["Javascript", "jQuery"]
+        madeWith: ["Javascript", "jQuery", "PostgreSQL"]
     },
     {
         id: 2,
         name: "Interview Scheduler",
         imageURL: Project7Photo,
         popUpImg: Project8Photo,
-        madeWith: ["Javascript", "React"]
+        madeWith: ["Javascript", "React", "PostgreSQL"]
     },
     {
         id: 3,
@@ -45,26 +48,18 @@ const temporaryProjectsArrayofObjects = [
     },
     {
         id: 4,
-        name: "Project6",
-        imageURL: Project4Photo,
-        popUpImg: Project1Photo,
-        madeWith: ["Javascript", "jQuery"]
+        name: "JungleOnRails",
+        imageURL: Project11Photo,
+        popUpImg: Project12Photo,
+        madeWith: ["Ruby", "Rails"]
     },
     {
         id: 5,
-        name: "Project7",
-        imageURL: Project4Photo,
-        popUpImg: Project1Photo,
-        madeWith: ["Javascript", "jQuery"]
-    },
-    {
-        id: 6,
-        name: "Project8",
-        imageURL: Project4Photo,
-        popUpImg: Project1Photo,
-        madeWith: ["Javascript", "React"]
+        name: "TinyApp",
+        imageURL: Project13Photo,
+        popUpImg: Project14Photo,
+        madeWith: ["Javascript"]
     }
-
 ]
 
 export default function Projects() {
