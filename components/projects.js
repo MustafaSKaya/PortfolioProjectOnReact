@@ -2,10 +2,14 @@ import Image from 'next/image';
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
 import Project1Photo from '../public/image.jpg';
-import Project2Photo from '../public/2.jpg';
-import Project3Photo from '../public/3.jpg';
-import Project4Photo from '../public/1.gif';
-import Project6Photo from '../public/6.jpg';
+import Project2Photo from '../public/LHLMidtermPopUp.png';
+import Project3Photo from '../public/LHLMidtermThumbnail.png';
+import Project4Photo from '../public/HeyNeighboursThumbnail.gif';
+import Project6Photo from '../public/HeyNeighboursPopUp.jpg';
+import Project7Photo from '../public/InterviewSchedulerThumbnail.jpg';
+import Project8Photo from '../public/InterviewSchedulerPopUp.jpg';
+import Project9Photo from '../public/MyTweeterThumbnail.jpg';
+import Project10Photo from '../public/MyTweeterPopUp.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import { redirect } from 'next/dist/server/api-utils';
@@ -13,31 +17,31 @@ import { redirect } from 'next/dist/server/api-utils';
 const temporaryProjectsArrayofObjects = [
     {
         id: 0,
-        name: "Project1",
+        name: "Hey Neighbours",
         imageURL: Project4Photo,
-        popUpImg: Project1Photo,
-        madeWith: ["Javascript", "React"]
+        popUpImg: Project6Photo,
+        madeWith: ["Javascript", "React", "PostgreSQL", ]
     },
     {
         id: 1,
-        name: "Project2",
-        imageURL: Project4Photo,
-        popUpImg: Project1Photo,
+        name: "ToDo List",
+        imageURL: Project3Photo,
+        popUpImg: Project2Photo,
         madeWith: ["Javascript", "jQuery"]
     },
     {
         id: 2,
-        name: "Project3",
-        imageURL: Project4Photo,
-        popUpImg: Project1Photo,
+        name: "Interview Scheduler",
+        imageURL: Project7Photo,
+        popUpImg: Project8Photo,
         madeWith: ["Javascript", "React"]
     },
     {
         id: 3,
-        name: "Project4",
-        imageURL: Project4Photo,
-        popUpImg: Project1Photo,
-        madeWith: ["Javascript", "React"]
+        name: "MyTweeter",
+        imageURL: Project9Photo,
+        popUpImg: Project10Photo,
+        madeWith: ["Javascript", "jQuery"]
     },
     {
         id: 4,
