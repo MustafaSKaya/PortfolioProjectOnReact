@@ -1,11 +1,12 @@
 import { faBars } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import clsx from 'clsx';
 import React, { useEffect, useState } from "react";
 
-export default function Navigation() {
+export default function Navigation({ brand }) {
 
     const [navBar, setNavBar] = useState(false);
+
+    //console.log(brand);
 
     const changeNavBar = () => {
         if (window.scrollY >= 100) {
@@ -23,7 +24,7 @@ export default function Navigation() {
     return (
         <nav className={navBar ? `navbar navbar-expand-lg sticky fixed-top styles-nav stickyadd` : `navbar navbar-expand-lg sticky fixed-top styles-nav`}>
             <div className="navContainer container">
-                <a href="#" className="navbar-brand">myPortfolioProject</a>
+                <a href="#" className="navbar-brand">{brand}</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarId">
                     <span><FontAwesomeIcon className="hamburger" icon={faBars} /></span>
                 </button>

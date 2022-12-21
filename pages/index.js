@@ -10,12 +10,32 @@ import Services from '../components/services.js';
 import Recommendations from '../components/recommendations.js';
 import Contact from '../components/contact.js';
 import Footer from '../components/footer.js';
+import { createClient } from 'contentful';
 
-export default function Home({data}) {
+const client = require('contentful').createClient({
+  space: process.env.CONTENTFUL_SPACE_ID,
+  accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
+});
+
+export async function getStaticProps() {
+
+  const dynamicProps = await client.getEntries({ content_type: 'fckThis'});
+
+  return {
+    props: {
+      dynamicProps: dynamicProps
+    }
+  }
+}
+
+export default function Home({data, dynamicProps}) {
+  console.log("dynamicProps are ", dynamicProps.items[0].fields);
+
+  const navBrand = dynamicProps.items[0].fields.brandTitle;
 
   return (
     <div>
-      <Navigation/>
+      <Navigation brand={navBrand}/>
       <Header/>
       <About/>
       <Skills/>
