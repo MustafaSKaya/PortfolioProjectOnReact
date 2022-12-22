@@ -42,7 +42,7 @@ export default function Header() {
                         </div>
                     </div>
                 </div>
-                <a href="#" className="btn">Let&apos;s connect</a>
+                <a href="#contact" className="btn">Let&apos;s connect</a>
             </div>
         </header>
     )

@@ -106,13 +106,13 @@ export default function About() {
                                 <div className="list-inline displayMiddle">
                                     <motion.li ref={ref18} initial={{ opacity: 0 }}
                                         animate={inView18 ? { opacity: 1 } : ''}
-                                        transition={inView18 ? { duration: 2, delay: aDelay*1 } : ''} className="list-inline-item"><a href=""><FontAwesomeIcon icon={faLinkedin} /></a></motion.li>
+                                        transition={inView18 ? { duration: 2, delay: aDelay*1 } : ''} className="list-inline-item"><a href="https://www.linkedin.com/in/mustafasaidkaya/" target="_blank"><FontAwesomeIcon icon={faLinkedin} /></a></motion.li>
                                     <motion.li ref={ref19} initial={{ opacity: 0 }}
                                         animate={inView19 ? { opacity: 1 } : ''}
-                                        transition={inView19 ? { duration: 2, delay: aDelay*1 } : ''} className="list-inline-item"><a href=""><FontAwesomeIcon icon={faGithub} /></a></motion.li>
+                                        transition={inView19 ? { duration: 2, delay: aDelay*1 } : ''} className="list-inline-item"><a href="https://github.com/MustafaSKaya" target="_blank"><FontAwesomeIcon icon={faGithub} /></a></motion.li>
                                     <motion.li ref={ref20} initial={{ opacity: 0 }}
                                         animate={inView20 ? { opacity: 1 } : ''}
-                                        transition={inView20 ? { duration: 2, delay: aDelay*1 } : ''} className="list-inline-item"><a href=""><FontAwesomeIcon icon={faEnvelope} /></a></motion.li>
+                                        transition={inView20 ? { duration: 2, delay: aDelay*1 } : ''} className="list-inline-item"><a href="#contact"><FontAwesomeIcon icon={faEnvelope} /></a></motion.li>
                                 </div>
                             </motion.div>
                         </div>

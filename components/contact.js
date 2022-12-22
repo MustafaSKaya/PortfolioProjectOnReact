@@ -7,8 +7,8 @@ export default function Contact() {
             <div className="container text-center">
                 <div className="row">
                     <div className="col way-fade-left">
-                        <h2>Contact Us</h2>
-                        <p>Feel free to contact me.</p>
+                        <h2>Contact Me</h2>
+                        <p>Feel free to reach me.</p>
                     </div>
                 </div>
                 <div className="row mt-5 way-fade-left ">

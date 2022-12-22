@@ -31,10 +31,10 @@ export default function Navigation({ brand }) {
                 <div className="navbar-collapse collapse" id="navbarId">
                     <ul className="navbar-nav ms-auto">
                         <li className="nav-item">
-                            <a href="" className="nav-link">About</a>
+                            <a href="#about" onClick={() => document.getElementById("about").scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"})}  className="nav-link">About</a>
                         </li>
                         <li className="nav-item">
-                            <a href="" className="nav-link">Skills</a>
+                            <a href="#skills" className="nav-link">Skills</a>
                         </li>
                     </ul>
                 </div>
