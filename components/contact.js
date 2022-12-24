@@ -1,14 +1,23 @@
-import React from 'react';
-import { useForm, ValidationError } from '@formspree/react';
+import React, { useRef } from 'react';
+import emailjs from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMobileAlt, faEnvelope, faMapPin } from '@fortawesome/free-solid-svg-icons';
 
 export default function Contact() {
 
-    const [state, handleSubmit] = useForm("mrgvzoeo");
-    if (state.succeeded) {
-        return <p>Thanks for joining!</p>;
-    }
+    const form = useRef();
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+
+        emailjs.sendForm('service_rv32ea8', 'template_m0548ae', e.target, 'nEMrrss7jVRI24KNs')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        e.target.reset();
+    };
 
     return (
         <section className="contact padding4section bg-sec" id="contact">
@@ -48,18 +57,13 @@ export default function Contact() {
                 </div>
                 <div className="row mt-5">
                     <div className="col">
-                        <form onSubmit={handleSubmit}>
+                        <form onSubmit={sendEmail}>
                             <div className="form-row way-fade-left">
                                 <div className="form-group col-md-6 col-12">
-                                    <input type="text" className="form-control" placeholder="Name" />
+                                    <input type="text" className="form-control" placeholder="Name" name='name' required />
                                 </div>
                                 <div className="form-group col-md-6 col-12">
-                                    <input id="email" type="email" name="email" className="form-control" placeholder="Email" required/>
-                                    <ValidationError
-                                        prefix="Email"
-                                        field="email"
-                                        errors={state.errors}
-                                    />
+                                    <input id="email" type="email" name="email" className="form-control" placeholder="Email" required />
                                 </div>
                             </div>
                             <div className="form-group way-fade-left">
@@ -68,14 +72,8 @@ export default function Contact() {
                             <div className="form-group way-fade-left">
                                 <textarea id="message"
                                     name="message" className="form-control message-area" rows="7" placeholder="Your Message" ></textarea>
-                                <ValidationError
-                                    prefix="Message"
-                                    field="message"
-                                    errors={state.errors}
-                                />
                             </div>
-
-                            <button type="submit" className="btn btn-danger way-fade-left" disabled={state.submitting}>Submit</button>
+                            <button type="submit" className="btn btn-danger way-fade-left">Submit</button>
                         </form>
                     </div>
                 </div>

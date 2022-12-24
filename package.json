@@ -17,6 +17,7 @@
     "bootstrap": "^5.2.2",
     "clsx": "^1.2.1",
     "contentful": "^9.2.14",
+    "emailjs-com": "^3.2.0",
     "eslint": "8.26.0",
     "eslint-config-next": "13.0.1",
     "filterizr": "^2.2.4",
