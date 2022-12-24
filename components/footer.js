@@ -1,8 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebookF } from '@fortawesome/free-brands-svg-icons';
-import { faTwitter } from '@fortawesome/free-brands-svg-icons';
-import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
-import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons';
 
 export default function Footer() {
     return (
@@ -12,10 +9,8 @@ export default function Footer() {
                     <div className="col">
                         <div className="r-icon text-center mt-3">
                             <ul className="footer-link-list">
-                                <li className="list-inline-item"><a href=""><FontAwesomeIcon icon={faFacebookF} /></a></li>
-                                <li className="list-inline-item"><a href=""><FontAwesomeIcon icon={faTwitter} /></a></li>
-                                <li className="list-inline-item"><a href=""><FontAwesomeIcon icon={faLinkedin} /></a></li>
-                                <li className="list-inline-item"><a href=""><FontAwesomeIcon icon={faGithub} /></a></li>
+                                <li className="list-inline-item"><a href="https://www.linkedin.com/in/mustafasaidkaya/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a></li>
+                                <li className="list-inline-item"><a href="https://github.com/MustafaSKaya" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /></a></li>
                             </ul>
                         </div>
                         <p className="text-muted">&copy;Copyright Mustafa Said Kaya / 2022 All Rights Reserved</p>

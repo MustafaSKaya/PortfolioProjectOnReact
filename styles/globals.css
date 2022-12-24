@@ -143,7 +143,7 @@ nav.styles-nav.stickyadd {
 }
 
 nav.stickyadd .navbar-brand{
-  color:rgb(205, 171, 0);
+  color:rgb(236, 209, 33);
   font-size: 1.20rem;
   transition: .5s all;
 }
@@ -786,23 +786,28 @@ footer .r-icon a:hover {
     font-size: 3vw;
   }
 
+  nav .navbar-nav li a {
+    font-size: 2.4vw;
+  }
+
   .content-box {
     position: relative;
     top: 6.5vh;
+    width: 60vw;
   }
 
   .element1 {
     font-family: 'Indie Flower', cursive;
     font-weight: bold;
-    font-size: 3vw;
+    font-size: 4.2vw;
     line-height: 1.5vh;
   }
   
   .element2 {
     font-family: 'Indie Flower', cursive;
     color: #FFFAF0;
-    font-size: 2vw;
-    line-height: .5vh;
+    font-size: 3.2vw;
+    line-height: 2vh;
   }
 
   .aboutCol {

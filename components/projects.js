@@ -23,7 +23,7 @@ const temporaryProjectsArrayofObjects = [
         name: "Hey Neighbours",
         imageURL: Project4Photo,
         popUpImg: Project6Photo,
-        madeWith: ["Javascript", "React", "PostgreSQL", ]
+        madeWith: ["Javascript", "React", "PostgreSQL",]
     },
     {
         id: 1,
@@ -113,10 +113,13 @@ export default function Projects() {
                 <div className="row">
                     <div className="col-12 mx-auto mb-3">
                         <button onClick={() => setActiveFilter("All")} className="btn btn-outline-info my-1">All</button>
+
                         <button onClick={() => setActiveFilter("jQuery")}
-                        className="btn btn-outline-info my-1">jQuery/Javascript</button>
+                            className="btn btn-outline-info my-1">jQuery/Javascript</button>
                         <button onClick={() => setActiveFilter("React")}
-                        className="btn btn-outline-info my-1">React/Javascript</button>
+                            className="btn btn-outline-info my-1">React/Javascript</button>
+                        <button onClick={() => setActiveFilter("React")}
+                            className="btn btn-outline-info my-1">React/Javascript</button>
                     </div>
                 </div>
                 <motion.div layout className="container">

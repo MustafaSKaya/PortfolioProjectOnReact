@@ -1,7 +1,15 @@
+import React from 'react';
+import { useForm, ValidationError } from '@formspree/react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faMobileAlt, faEnvelope, faMapPin } from '@fortawesome/free-solid-svg-icons';
 
 export default function Contact() {
+
+    const [state, handleSubmit] = useForm("mrgvzoeo");
+    if (state.succeeded) {
+        return <p>Thanks for joining!</p>;
+    }
+
     return (
         <section className="contact padding4section bg-sec" id="contact">
             <div className="container text-center">
@@ -40,23 +48,34 @@ export default function Contact() {
                 </div>
                 <div className="row mt-5">
                     <div className="col">
-                        <form>
+                        <form onSubmit={handleSubmit}>
                             <div className="form-row way-fade-left">
                                 <div className="form-group col-md-6 col-12">
                                     <input type="text" className="form-control" placeholder="Name" />
                                 </div>
                                 <div className="form-group col-md-6 col-12">
-                                    <input type="email" className="form-control" placeholder="Email" />
+                                    <input id="email" type="email" name="email" className="form-control" placeholder="Email" required/>
+                                    <ValidationError
+                                        prefix="Email"
+                                        field="email"
+                                        errors={state.errors}
+                                    />
                                 </div>
                             </div>
                             <div className="form-group way-fade-left">
-                                <input type="text" className="form-control" placeholder="Subject" />
+                                <input name="subject" type="text" className="form-control" placeholder="Subject" />
                             </div>
                             <div className="form-group way-fade-left">
-                                <textarea className="form-control message-area" rows="7" placeholder="Your Message" ></textarea>
+                                <textarea id="message"
+                                    name="message" className="form-control message-area" rows="7" placeholder="Your Message" ></textarea>
+                                <ValidationError
+                                    prefix="Message"
+                                    field="message"
+                                    errors={state.errors}
+                                />
                             </div>
 
-                            <button type="submit" className="btn btn-danger way-fade-left">Submit</button>
+                            <button type="submit" className="btn btn-danger way-fade-left" disabled={state.submitting}>Submit</button>
                         </form>
                     </div>
                 </div>

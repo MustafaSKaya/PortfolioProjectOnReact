@@ -12,7 +12,7 @@ import Contact from '../components/contact.js';
 import Footer from '../components/footer.js';
 import { createClient } from 'contentful';
 
-const client = require('contentful').createClient({
+const client = createClient({
   space: process.env.CONTENTFUL_SPACE_ID,
   accessToken: process.env.CONTENTFUL_ACCESS_TOKEN
 });
@@ -22,21 +22,21 @@ export async function getStaticProps() {
   const dynamicProps = await client.getEntries({ content_type: 'fckThis'});
 
   return {
-    props: {
-      dynamicProps: dynamicProps
-    }
+    props: dynamicProps.items[0].fields
   }
 }
 
-export default function Home({data, dynamicProps}) {
-  console.log("dynamicProps are ", dynamicProps.items[0].fields);
+export default function Home(props) {
+  //console.log("dynamicProps are ", props);
 
-  const navBrand = dynamicProps.items[0].fields.brandTitle;
+  const navTitle = props.navTitle;
+  const headerQuote1 = props.headerQuote1;
+  const headerQuote2 = props.headerQuote2;
 
   return (
     <div>
-      <Navigation brand={navBrand}/>
-      <Header/>
+      <Navigation navTitle={navTitle}/>
+      <Header headerQuote1={headerQuote1} headerQuote2={headerQuote2}/>
       <About/>
       <Skills/>
       <Projects/>

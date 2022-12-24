@@ -1,14 +1,16 @@
 import Typed from "typed.js";
 import { useEffect, useRef } from "react";
 
-export default function Header() {
+export default function Header({headerQuote1, headerQuote2} ) {
 
     const element1 = useRef(null);
     const element2 = useRef(null);
 
+    //console.log(headerQuote1)
+
     useEffect(() => {
         const typed1 = new Typed(element1.current, {
-            strings: ["Googling throughout the day; still missing semicolons to my dismay."],
+            strings: [`${headerQuote1}`],
             startDelay: 500,
             typeSpeed: 90,
             backSpeed: 100,
@@ -17,7 +19,7 @@ export default function Header() {
         });
 
         const typed2 = new Typed(element2.current, {
-            strings: ["Bulding applications with vision, creativity and proper amount of tears that not only looks and feels good but works good."],
+            strings: [`${headerQuote2}`],
             startDelay: 9000,
             typeSpeed: 65,
             backSpeed: 100,
