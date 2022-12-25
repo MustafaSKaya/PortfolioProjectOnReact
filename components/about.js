@@ -9,7 +9,7 @@ import { useInView } from 'react-intersection-observer';
 
 export default function About() {
 
-    const [aDelay, setADelay] = useState(1);
+    const [aDelay, setADelay] = useState(1.5);
 
     const { ref, inView } = useInView();
     const [ref2, inView2] = useInView();
@@ -41,78 +41,78 @@ export default function About() {
                     <div className='row'>
                         <div className='col-lg-8'>
                             <div className='row aboutRow '>
-                                <motion.div ref={ref} initial={{ y: 200, opacity: 0 }}
+                                <motion.div ref={ref} initial={{ y: 100, opacity: 0 }}
                                     animate={inView ? { y: 0, opacity: 1 } : ''}
                                     transition={{ duration: .75 }}
                                     className='col-8 aboutCol nameCol h-auto'>
                                     <div className='displayBottom'>
                                         <motion.h2 ref={ref2} initial={{ opacity: 0 }}
-                                            animate={inView2 ? { opacity: 1 } : ''}
-                                            transition={inView2 ? { duration: .75, delay: aDelay * .5 } : ''} className="text-start">Mustafa Said Kaya</motion.h2>
+                                            animate={inView ? { opacity: 1 } : ''}
+                                            transition={inView ? { duration: .75, delay: aDelay * .5 } : ''} className="text-start">Mustafa Said Kaya</motion.h2>
                                         <motion.h4 ref={ref3} initial={{ opacity: 0 }}
-                                            animate={inView3 ? { opacity: 1 } : ''}
-                                            transition={inView3 ? { duration: .75, delay: aDelay * .75 } : ''} className="text-start">Junior Full-Stack Web Developer</motion.h4>
+                                            animate={inView ? { opacity: 1 } : ''}
+                                            transition={inView ? { duration: .75, delay: aDelay * .75 } : ''} className="text-start">Junior Full-Stack Web Developer</motion.h4>
                                     </div>
                                 </motion.div>
-                                <motion.div ref={ref5} initial={{ y: 200, opacity: 0 }}
-                                    animate={inView5 ? { y: 0, opacity: 1 } : ''}
-                                    transition={inView5 ? { duration: .75, delay: aDelay * 2 } : ''} className='col-4 aboutCol photoCol'>
+                                <motion.div ref={ref5} initial={{ y: 100, opacity: 0 }}
+                                    animate={inView ? { y: 0, opacity: 1 } : ''}
+                                    transition={inView ? { duration: .75, delay: aDelay * 1.75 } : ''} className='col-4 aboutCol photoCol'>
                                     <Image src={ThumnailPhoto} alt="profile picture" className="img-fluid img-thumbnail im-style" />
                                 </motion.div>
                             </div>
                             <div className='row aboutRow '>
-                                <motion.div ref={ref12} initial={{ y: 200, opacity: 0 }}
-                                    animate={inView12 ? { y: 0, opacity: 1 } : ''}
-                                    transition={inView12 ? { duration: .75, delay: aDelay * 4 } : ''} className='col-4 aboutCol'>
+                                <motion.div ref={ref12} initial={{ y: 100, opacity: 0 }}
+                                    animate={inView ? { y: 0, opacity: 1 } : ''}
+                                    transition={inView ? { duration: .75, delay: aDelay * 4 } : ''} className='col-4 aboutCol'>
                                     <motion.div ref={ref14} initial={{ opacity: 0 }}
-                                        animate={inView14 ? { opacity: 1 } : ''}
-                                        transition={inView14 ? { duration: 1, delay: aDelay * 4.5 } : ''} className="text-break">
+                                        animate={inView ? { opacity: 1 } : ''}
+                                        transition={inView ? { duration: 1, delay: aDelay * 4.5 } : ''} className="text-break">
                                         <h3>Persistent</h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur</p>
                                     </motion.div>
                                     <motion.div ref={ref15} initial={{ opacity: 0 }}
-                                        animate={inView15 ? { opacity: 1 } : ''}
-                                        transition={inView15 ? { duration: 1, delay: aDelay * 5 } : ''} className="text-break">
+                                        animate={inView ? { opacity: 1 } : ''}
+                                        transition={inView ? { duration: 1, delay: aDelay * 5 } : ''} className="text-break">
                                         <h3>Hard-working</h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur</p>
                                     </motion.div>
                                     <motion.div ref={ref16} initial={{ opacity: 0 }}
-                                        animate={inView16 ? { opacity: 1 } : ''}
-                                        transition={inView16 ? { duration: 1, delay: aDelay * 5.5 } : ''} className="text-break">
+                                        animate={inView ? { opacity: 1 } : ''}
+                                        transition={inView ? { duration: 1, delay: aDelay * 5.5 } : ''} className="text-break">
                                         <h3>Blablabla</h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur</p>
                                     </motion.div>
                                 </motion.div>
-                                <motion.div ref={ref9} initial={{ y: 200, opacity: 0 }}
-                                    animate={inView9 ? { y: 0, opacity: 1 } : ''}
-                                    transition={inView9 ? { duration: .75, delay: aDelay * 2.5 } : ''} className='col-8 aboutCol personalityCol'>
+                                <motion.div ref={ref9} initial={{ y: 100, opacity: 0 }}
+                                    animate={inView ? { y: 0, opacity: 1 } : ''}
+                                    transition={inView ? { duration: .75, delay: aDelay * 2.5 } : ''} className='col-8 aboutCol personalityCol'>
                                     <motion.p ref={ref11} initial={{ opacity: 0 }}
-                                        animate={inView11 ? { opacity: 1 } : ''}
-                                        transition={inView11 ? { duration: 1, delay: aDelay * 3.5 } : ''} className="text-start">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quaerat voluptatem sequi ut. Eligendi id enim numquam magni, quibusdam at? Harum odit incidunt explicabo veritatis alias, ut consequatur repudiandae similique.Velit provident facilis eligendi harum, quidem nisi repellendus soluta hic dolorem asperiores quia eius Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quaerat voluptatem sequi ut. Eligendi id enim numquam magni, quibusdam at? Harum odit incidunt explicabo veritatis alias, ut consequatur repudiandae similique.Velit provident facilis eligendi harum, quidem nisi repellendus soluta hic dolorem asperiores quia eius Lorem ipsum dolor sit amet,</motion.p>
+                                        animate={inView ? { opacity: 1 } : ''}
+                                        transition={inView ? { duration: 1, delay: aDelay * 3.5 } : ''} className="text-start">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quaerat voluptatem sequi ut. Eligendi id enim numquam magni, quibusdam at? Harum odit incidunt explicabo veritatis alias, ut consequatur repudiandae similique.Velit provident facilis eligendi harum, quidem nisi repellendus soluta hic dolorem asperiores quia eius Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quaerat voluptatem sequi ut. Eligendi id enim numquam magni, quibusdam at? Harum odit incidunt explicabo veritatis alias, ut consequatur repudiandae similique.Velit provident facilis eligendi harum, quidem nisi repellendus soluta hic dolorem asperiores quia eius Lorem ipsum dolor sit amet,</motion.p>
                                 </motion.div>
                             </div>
                         </div>
                         <div className='col-lg-4 rightRow'>
-                            <motion.div ref={ref6} initial={{ y: 200, opacity: 0 }}
-                                animate={inView6 ? { y: 0, opacity: 1 } : ''}
-                                transition={inView6 ? { duration: .75, delay: aDelay * 2.5 } : ''} className='col aboutCol h-75 d-inline-block'>
+                            <motion.div ref={ref6} initial={{ y: 100, opacity: 0 }}
+                                animate={inView ? { y: 0, opacity: 1 } : ''}
+                                transition={inView ? { duration: .75, delay: aDelay * 2.5 } : ''} className='col aboutCol h-75 d-inline-block'>
                                 <motion.p ref={ref8} initial={{ opacity: 0 }}
-                                    animate={inView8 ? { opacity: 1 } : ''}
-                                    transition={inView8 ? { duration: 1, delay: aDelay * 3 } : ''} className="text-start">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quaerat voluptatem sequi ut. Eligendi id enim numquam magni, quibusdam at? Harum odit incidunt explicabo veritatis alias, ut consequatur repudiandae similique.</motion.p>
+                                    animate={inView ? { opacity: 1 } : ''}
+                                    transition={inView ? { duration: 1, delay: aDelay * 3 } : ''} className="text-start">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quaerat voluptatem sequi ut. Eligendi id enim numquam magni, quibusdam at? Harum odit incidunt explicabo veritatis alias, ut consequatur repudiandae similique.</motion.p>
                             </motion.div>
-                            <motion.div ref={ref17} initial={{ y: 200, opacity: 0 }}
-                                animate={inView17 ? { y: 0, opacity: 1 } : ''}
-                                transition={inView17 ? { duration: .75, delay: aDelay * 5 } : ''} className='col aboutCol linkListCol w-100 p-3 h-25'>
+                            <motion.div ref={ref17} initial={{ y: 100, opacity: 0 }}
+                                animate={inView ? { y: 0, opacity: 1 } : ''}
+                                transition={inView ? { duration: .75, delay: aDelay * 5.75 } : ''} className='col aboutCol linkListCol w-100 p-3 h-25'>
                                 <div className="list-inline displayMiddle">
                                     <motion.li ref={ref18} initial={{ opacity: 0 }}
-                                        animate={inView18 ? { opacity: 1 } : ''}
-                                        transition={inView18 ? { duration: 2, delay: aDelay * 1 } : ''} className="list-inline-item"><a href="https://www.linkedin.com/in/mustafasaidkaya/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a></motion.li>
+                                        animate={inView ? { opacity: 1 } : ''}
+                                        transition={inView ? { duration: 2, delay: aDelay * 6 } : ''} className="list-inline-item"><a href="https://www.linkedin.com/in/mustafasaidkaya/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a></motion.li>
                                     <motion.li ref={ref19} initial={{ opacity: 0 }}
-                                        animate={inView19 ? { opacity: 1 } : ''}
-                                        transition={inView19 ? { duration: 2, delay: aDelay * 1 } : ''} className="list-inline-item"><a href="https://github.com/MustafaSKaya" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /></a></motion.li>
+                                        animate={inView ? { opacity: 1 } : ''}
+                                        transition={inView ? { duration: 2, delay: aDelay * 6 } : ''} className="list-inline-item"><a href="https://github.com/MustafaSKaya" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /></a></motion.li>
                                     <motion.li ref={ref20} initial={{ opacity: 0 }}
-                                        animate={inView20 ? { opacity: 1 } : ''}
-                                        transition={inView20 ? { duration: 2, delay: aDelay * 1 } : ''} className="list-inline-item"><a href="#contact"><FontAwesomeIcon icon={faEnvelope} /></a></motion.li>
+                                        animate={inView ? { opacity: 1 } : ''}
+                                        transition={inView ? { duration: 2, delay: aDelay * 6 } : ''} className="list-inline-item"><a href="#contact"><FontAwesomeIcon icon={faEnvelope} /></a></motion.li>
                                 </div>
                             </motion.div>
                         </div>
