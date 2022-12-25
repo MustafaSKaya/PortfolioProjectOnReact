@@ -27,17 +27,24 @@ export async function getStaticProps() {
 }
 
 export default function Home(props) {
-  //console.log("dynamicProps are ", props);
+  console.log("dynamicProps are ", props);
 
   const navTitle = props.navTitle;
   const headerQuote1 = props.headerQuote1;
   const headerQuote2 = props.headerQuote2;
+  const aboutName = props.aboutName;
+  const aboutProfession = props.aboutProfession;
+  const aboutSummary = props.aboutSummary;
+  const aboutPhilosophy = props.aboutPhilosophy;
+  const aboutCharacterHeadlines = props.aboutCharacterHeadlines
+  const githubLink = props.githubLink;
+  const linkedinLink = props.linkedinLink;
 
   return (
     <div>
       <Navigation navTitle={navTitle}/>
       <Header headerQuote1={headerQuote1} headerQuote2={headerQuote2}/>
-      <About/>
+      <About aboutName={aboutName} aboutProfession={aboutProfession} aboutSummary={aboutSummary} aboutPhilosophy={aboutPhilosophy} githubLink={githubLink} linkedinLink={linkedinLink} aboutCharacterHeadlines={aboutCharacterHeadlines}/>
       <Skills/>
       <Projects/>
       <Services/>

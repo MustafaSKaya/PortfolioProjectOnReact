@@ -7,7 +7,9 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 
-export default function About() {
+export default function About(props) {
+
+    //console.log("aboutsection", props)
 
     const [aDelay, setADelay] = useState(1.5);
 
@@ -48,10 +50,10 @@ export default function About() {
                                     <div className='displayBottom'>
                                         <motion.h2 ref={ref2} initial={{ opacity: 0 }}
                                             animate={inView ? { opacity: 1 } : ''}
-                                            transition={inView ? { duration: .75, delay: aDelay * .5 } : ''} className="text-start">Mustafa Said Kaya</motion.h2>
+                                            transition={inView ? { duration: .75, delay: aDelay * .5 } : ''} className="text-start">{props.aboutName}</motion.h2>
                                         <motion.h4 ref={ref3} initial={{ opacity: 0 }}
                                             animate={inView ? { opacity: 1 } : ''}
-                                            transition={inView ? { duration: .75, delay: aDelay * .75 } : ''} className="text-start">Junior Full-Stack Web Developer</motion.h4>
+                                            transition={inView ? { duration: .75, delay: aDelay * .75 } : ''} className="text-start">{props.aboutProfession}</motion.h4>
                                     </div>
                                 </motion.div>
                                 <motion.div ref={ref5} initial={{ y: 100, opacity: 0 }}
@@ -67,14 +69,14 @@ export default function About() {
                                     <motion.div ref={ref14} initial={{ opacity: 0 }}
                                         animate={inView ? { opacity: 1 } : ''}
                                         transition={inView ? { duration: 1, delay: aDelay * 4.5 } : ''} className="text-break">
-                                        <h3>Persistent</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                        <h3>{props.aboutCharacterHeadlines[0].fields.trait}</h3>
+                                        <p>{props.aboutCharacterHeadlines[0].fields.explanation}</p>
                                     </motion.div>
                                     <motion.div ref={ref15} initial={{ opacity: 0 }}
                                         animate={inView ? { opacity: 1 } : ''}
                                         transition={inView ? { duration: 1, delay: aDelay * 5 } : ''} className="text-break">
-                                        <h3>Hard-working</h3>
-                                        <p>Lorem ipsum dolor sit amet, consectetur</p>
+                                        <h3>{props.aboutCharacterHeadlines[1].fields.trait}</h3>
+                                        <p>{props.aboutCharacterHeadlines[1].fields.explanation}</p>
                                     </motion.div>
                                     <motion.div ref={ref16} initial={{ opacity: 0 }}
                                         animate={inView ? { opacity: 1 } : ''}
@@ -88,7 +90,7 @@ export default function About() {
                                     transition={inView ? { duration: .75, delay: aDelay * 2.5 } : ''} className='col-8 aboutCol personalityCol'>
                                     <motion.p ref={ref11} initial={{ opacity: 0 }}
                                         animate={inView ? { opacity: 1 } : ''}
-                                        transition={inView ? { duration: 1, delay: aDelay * 3.5 } : ''} className="text-start">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quaerat voluptatem sequi ut. Eligendi id enim numquam magni, quibusdam at? Harum odit incidunt explicabo veritatis alias, ut consequatur repudiandae similique.Velit provident facilis eligendi harum, quidem nisi repellendus soluta hic dolorem asperiores quia eius Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quaerat voluptatem sequi ut. Eligendi id enim numquam magni, quibusdam at? Harum odit incidunt explicabo veritatis alias, ut consequatur repudiandae similique.Velit provident facilis eligendi harum, quidem nisi repellendus soluta hic dolorem asperiores quia eius Lorem ipsum dolor sit amet,</motion.p>
+                                        transition={inView ? { duration: 1, delay: aDelay * 3.5 } : ''} className="text-start">{props.aboutSummary}</motion.p>
                                 </motion.div>
                             </div>
                         </div>
@@ -98,7 +100,7 @@ export default function About() {
                                 transition={inView ? { duration: .75, delay: aDelay * 2.5 } : ''} className='col aboutCol h-75 d-inline-block'>
                                 <motion.p ref={ref8} initial={{ opacity: 0 }}
                                     animate={inView ? { opacity: 1 } : ''}
-                                    transition={inView ? { duration: 1, delay: aDelay * 3 } : ''} className="text-start">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates quaerat voluptatem sequi ut. Eligendi id enim numquam magni, quibusdam at? Harum odit incidunt explicabo veritatis alias, ut consequatur repudiandae similique.</motion.p>
+                                    transition={inView ? { duration: 1, delay: aDelay * 3 } : ''} className="text-start">{props.aboutPhilosophy}</motion.p>
                             </motion.div>
                             <motion.div ref={ref17} initial={{ y: 100, opacity: 0 }}
                                 animate={inView ? { y: 0, opacity: 1 } : ''}
@@ -106,10 +108,10 @@ export default function About() {
                                 <div className="list-inline displayMiddle">
                                     <motion.li ref={ref18} initial={{ opacity: 0 }}
                                         animate={inView ? { opacity: 1 } : ''}
-                                        transition={inView ? { duration: 2, delay: aDelay * 6 } : ''} className="list-inline-item"><a href="https://www.linkedin.com/in/mustafasaidkaya/" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a></motion.li>
+                                        transition={inView ? { duration: 2, delay: aDelay * 6 } : ''} className="list-inline-item"><a href={props.linkedinLink} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a></motion.li>
                                     <motion.li ref={ref19} initial={{ opacity: 0 }}
                                         animate={inView ? { opacity: 1 } : ''}
-                                        transition={inView ? { duration: 2, delay: aDelay * 6 } : ''} className="list-inline-item"><a href="https://github.com/MustafaSKaya" target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /></a></motion.li>
+                                        transition={inView ? { duration: 2, delay: aDelay * 6 } : ''} className="list-inline-item"><a href={props.githubLink} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faGithub} /></a></motion.li>
                                     <motion.li ref={ref20} initial={{ opacity: 0 }}
                                         animate={inView ? { opacity: 1 } : ''}
                                         transition={inView ? { duration: 2, delay: aDelay * 6 } : ''} className="list-inline-item"><a href="#contact"><FontAwesomeIcon icon={faEnvelope} /></a></motion.li>

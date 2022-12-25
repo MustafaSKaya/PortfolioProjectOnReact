@@ -28,14 +28,7 @@ export default function Contact() {
                         <p>Feel free to reach me.</p>
                     </div>
                 </div>
-                <div className="row mt-5 way-fade-left ">
-                    <div className="col-md-4">
-                        <div className="r-icon"><FontAwesomeIcon icon={faMobileAlt} /></div>
-                        <div className="text-center">
-                            <h5>Call Us</h5>
-                            <p>647-236-3370</p>
-                        </div>
-                    </div>
+                <div className="row way-fade-left ">
 
                     <div className="col-md-4">
                         <div className="r-icon"><FontAwesomeIcon icon={faEnvelope} /></div>
@@ -49,8 +42,8 @@ export default function Contact() {
                     <div className="col-md-4">
                         <div className="r-icon"><FontAwesomeIcon icon={faMapPin} /></div>
                         <div className="text-center">
-                            <h5>Visit Us</h5>
-                            <p className="text-muted">147 Rutherford Crt</p>
+                            <h5>Visit Me</h5>
+                            <p className="text-muted">Ottawa/Canada</p>
 
                         </div>
                     </div>
