@@ -53,10 +53,10 @@ export default function About(props) {
                                 <motion.div initial={{ y: 100, opacity: 0 }}
                                     animate={inView ? { y: 0, opacity: 1 } : ''}
                                     transition={inView ? { duration: .75, delay: aDelay * 4 } : ''} className='col-4 aboutCol'>
-                                    {props.aboutCharacterHeadlines.map((headline) => {
+                                    {props.aboutCharacterHeadlines.map((headline, index) => {
                                         delayMultiplier += 0.5;
-                                        console.log(delayMultiplier);
-                                        return <motion.div initial={{ opacity: 0 }}
+                                        //console.log(index);
+                                        return <motion.div key={index} initial={{ opacity: 0 }}
                                             animate={inView ? { opacity: 1 } : ''}
                                             transition={inView ? { duration: 1, delay: aDelay * delayMultiplier } : ''} className="text-break">
                                             <h3>{headline.fields.trait}</h3>
