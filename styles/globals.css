@@ -226,7 +226,7 @@ header {
 /* About Section */
 
 .aboutCol {
-  padding: 1.5vw;
+  padding: 1.5vh 1.5vw;
   background-color: rgb(225, 225, 225);
   text-align: center;
   border: .5rem solid #fff;
@@ -656,7 +656,7 @@ footer .r-icon a:hover {
 
 @media (min-width: 200px) and (max-width: 767px) {
   p {
-    font-size: 2.2vw !important;
+    font-size: 2.4vw !important;
     line-height: 2.2vh !important; 
   }
 
@@ -684,7 +684,7 @@ footer .r-icon a:hover {
   }
 
   nav .navbar-brand {
-    font-size: 3.6vw;
+    font-size: 5.6vw;
   }
 
   nav.styles-nav {
@@ -705,12 +705,12 @@ footer .r-icon a:hover {
 
   .content-box .element1 {
     line-height: 32px;
-    font-size: 4vw;
+    font-size: 5vw;
   }
 
   .content-box .element2 {
     line-height: 10px;
-    font-size: 2.4vw;
+    font-size: 3.6vw;
   }
 
   .header-content a {
@@ -723,14 +723,17 @@ footer .r-icon a:hover {
 
   .aboutCol h2 {
     font-size: 3.2vw;
+    margin-bottom: 0vh;
   }
   
   .aboutCol h3 {
     font-size: 3vw;
+    margin-bottom: 0vh;
   }
   
   .aboutCol h4 {
     font-size: 2.8vw;
+    margin-bottom: 0vh;
   }
 
 
