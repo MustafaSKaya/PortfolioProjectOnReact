@@ -656,7 +656,7 @@ footer .r-icon a:hover {
 
 @media (min-width: 200px) and (max-width: 767px) {
   p {
-    font-size: 2.4vw !important;
+    font-size: 3.2vw !important;
     line-height: 2.2vh !important; 
   }
 
@@ -722,13 +722,13 @@ footer .r-icon a:hover {
   }
 
   .aboutCol h2 {
-    font-size: 3.2vw;
+    font-size: 4.2vw;
     margin-bottom: 0vh;
   }
   
   .aboutCol h3 {
-    font-size: 3vw;
-    margin-bottom: 0vh;
+    font-size: 3.8vw;
+    margin-bottom: 1vh;
   }
   
   .aboutCol h4 {
