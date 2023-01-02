@@ -226,7 +226,7 @@ header {
 /* About Section */
 
 .aboutCol {
-  padding: 1.5rem;
+  padding: 1.5vw;
   background-color: rgb(225, 225, 225);
   text-align: center;
   border: .5rem solid #fff;
@@ -235,6 +235,18 @@ header {
 .nameCol {
   display: table;
   background-color: rgb(236, 209, 33);
+}
+
+.aboutCol h2 {
+  font-size: 1.8vw;
+}
+
+.aboutCol h3 {
+  font-size: 1.7vw;
+}
+
+.aboutCol h4 {
+  font-size: 1.5vw;
 }
 
 .displayBottom {
@@ -644,35 +656,35 @@ footer .r-icon a:hover {
 
 @media (min-width: 200px) and (max-width: 767px) {
   p {
-    font-size: 2.8vw !important;
-    line-height: .8rem !important; 
+    font-size: 2.2vw !important;
+    line-height: 2.2vh !important; 
   }
 
   h1 {
-    font-size: 5.6vw !important;
+    font-size: 5.6vw;
   }
 
   h2 {
-    font-size: 4vw !important;
-    margin-bottom: 0 !important;
+    font-size: 4vw;
+    margin-bottom: 0;
   }
 
   h3 {
-    font-size: 3.6vw !important;
+    font-size: 3.6vw;
     
   }
 
   h4,h5,h6 {
-    font-size: 3.6vw !important;
+    font-size: 3.6vw;
     margin-bottom: 0;
   }
 
   label {
-    font-size: 3.6vw !important;
+    font-size: 3.6vw;
   }
 
   nav .navbar-brand {
-    font-size: 5.6vw;
+    font-size: 3.6vw;
   }
 
   nav.styles-nav {
@@ -686,19 +698,19 @@ footer .r-icon a:hover {
   .content-box {
     position: relative;
     top: 6.5vh;
-    width: 75vw;
+    width: 70vw;
     height: 35vh;
     color: #fff;
 }
 
   .content-box .element1 {
     line-height: 32px;
-    font-size: 6vw;
+    font-size: 4vw;
   }
 
   .content-box .element2 {
     line-height: 10px;
-    font-size: 4vw;
+    font-size: 2.4vw;
   }
 
   .header-content a {
@@ -708,6 +720,19 @@ footer .r-icon a:hover {
   .aboutCol {
     padding: 3.2vw;
   }
+
+  .aboutCol h2 {
+    font-size: 3.2vw;
+  }
+  
+  .aboutCol h3 {
+    font-size: 3vw;
+  }
+  
+  .aboutCol h4 {
+    font-size: 2.8vw;
+  }
+
 
   .about li a {
     height: 2rem;
@@ -763,8 +788,8 @@ footer .r-icon a:hover {
 @media (min-width: 768px) and (max-width: 992px) {
   p {
     font-family: "Source Sans Pro", sans-serif;
-    font-size: 2vw;
-    line-height: 1rem;
+    font-size: 1.8vw;
+    line-height: 2.8vh;
     color: #505c66;
   }
 
@@ -811,6 +836,18 @@ footer .r-icon a:hover {
 
   .aboutCol {
     padding: 2.4vw;
+  }
+
+  .aboutCol h2 {
+    font-size: 2.4vw;
+  }
+  
+  .aboutCol h3 {
+    font-size: 2.2vw;
+  }
+  
+  .aboutCol h4 {
+    font-size: 2vw;
   }
 
   .about li a {

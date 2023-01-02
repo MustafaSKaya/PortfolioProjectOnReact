@@ -34,6 +34,7 @@ export default function Home(props) {
   const headerQuote2 = props.headerQuote2;
   const aboutName = props.aboutName;
   const aboutProfession = props.aboutProfession;
+  const aboutPPhoto = props.aboutPPhoto;
   const aboutSummary = props.aboutSummary;
   const aboutPhilosophy = props.aboutPhilosophy;
   const aboutCharacterHeadlines = props.aboutCharacterHeadlines
@@ -44,7 +45,7 @@ export default function Home(props) {
     <div>
       <Navigation navTitle={navTitle}/>
       <Header headerQuote1={headerQuote1} headerQuote2={headerQuote2}/>
-      <About aboutName={aboutName} aboutProfession={aboutProfession} aboutSummary={aboutSummary} aboutPhilosophy={aboutPhilosophy} githubLink={githubLink} linkedinLink={linkedinLink} aboutCharacterHeadlines={aboutCharacterHeadlines}/>
+      <About aboutName={aboutName} aboutProfession={aboutProfession} aboutPPhoto={aboutPPhoto} aboutSummary={aboutSummary} aboutPhilosophy={aboutPhilosophy} githubLink={githubLink} linkedinLink={linkedinLink} aboutCharacterHeadlines={aboutCharacterHeadlines} />
       <Skills/>
       <Projects/>
       <Services/>
