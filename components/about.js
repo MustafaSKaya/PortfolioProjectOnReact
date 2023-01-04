@@ -9,7 +9,7 @@ import { useInView } from 'react-intersection-observer';
 
 export default function About(props) {
 
-    console.log("aboutsection", props)
+    //console.log("aboutsection", props)
 
     const [aDelay, setADelay] = useState(1.5);
 
@@ -30,7 +30,7 @@ export default function About(props) {
                     <div className='row'>
                         <div className='col-lg-8'>
                             <div className='row aboutRow '>
-                                <motion.div ref={ref} initial={{ y: 100, opacity: 0 }}
+                                <motion.div initial={{ y: 100, opacity: 0 }}
                                     animate={inView ? { y: 0, opacity: 1 } : ''}
                                     transition={{ duration: .75 }}
                                     className='col-8 aboutCol nameCol h-auto'>
@@ -64,7 +64,7 @@ export default function About(props) {
                                         </motion.div>
                                     })}
                                 </motion.div>
-                                <motion.div initial={{ y: 100, opacity: 0 }}
+                                <motion.div ref={ref} initial={{ y: 100, opacity: 0 }}
                                     animate={inView ? { y: 0, opacity: 1 } : ''}
                                     transition={inView ? { duration: .75, delay: aDelay * 2.5 } : ''} className='col-8 aboutCol personalityCol'>
                                     <motion.p initial={{ opacity: 0 }}

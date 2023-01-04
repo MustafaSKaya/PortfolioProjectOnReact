@@ -238,15 +238,15 @@ header {
 }
 
 .aboutCol h2 {
-  font-size: 1.8vw;
+  font-size: 1.4vw;
 }
 
 .aboutCol h3 {
-  font-size: 1.7vw;
+  font-size: 1.3vw;
 }
 
 .aboutCol h4 {
-  font-size: 1.5vw;
+  font-size: 1.2vw;
 }
 
 .displayBottom {
@@ -332,18 +332,22 @@ header {
 }
 
 .progress-bar {
-    width: 0%;
-    background-color: #ee8683 !important;
+  width: 0%;
+  background-color: #ee8683 !important;
+}
+
+.skillsHeadline h3 {
+  font-size: 1.4vw;
 }
 
 .skills label {
-    font-size: 1.25rem;
+    font-size: 0.8vw;
     margin-top: 1.25rem;
 }
 
 .techs .svg-inline--fa {
-  width: 3rem;
-  height: 3rem;
+  width: 3.6rem;
+  height: 3.2rem;
   transition: 3s all;
 }
 
@@ -356,37 +360,6 @@ header {
   filter: grayscale(0%);
   transition: .5s all;
 }
-
-.skills:hover .fa-html5{
-  color: #e44d26;
-  transition: .5s all;
-}
-
-.skills:hover .fa-css3-alt{
-  color: #264de4;
-  transition: .5s all;
-}
-
-.skills:hover .fa-js{
-  color: #f7e018;
-  transition: .5s all;
-}
-
-.skills:hover .fa-react{
-  color: #61dbfb;
-  transition: .5s all;
-}
-
-.skills:hover .fa-sass{
-  color: #ce679a;
-  transition: .5s all;
-}
-
-.skills:hover .fa-php{
-  color: #777bb3;
-  transition: .5s all;
-}
-
 /* Projects Section */
 
 .projects .card-wrapper {
@@ -656,7 +629,7 @@ footer .r-icon a:hover {
 
 @media (min-width: 200px) and (max-width: 767px) {
   p {
-    font-size: 3.2vw !important;
+    font-size: 2.2vw !important;
     line-height: 2.2vh !important; 
   }
 
@@ -722,17 +695,17 @@ footer .r-icon a:hover {
   }
 
   .aboutCol h2 {
-    font-size: 4.2vw;
+    font-size: 3.6vw;
     margin-bottom: 0vh;
   }
   
   .aboutCol h3 {
-    font-size: 3.8vw;
+    font-size: 3vw;
     margin-bottom: 1vh;
   }
   
   .aboutCol h4 {
-    font-size: 2.8vw;
+    font-size: 2.4vw;
     margin-bottom: 0vh;
   }
 
@@ -750,6 +723,16 @@ footer .r-icon a:hover {
 
   .linkListCol {
     height: auto !important;
+  }
+
+  .skillsHeadline h3 {
+    font-size: 3.6vw;
+    margin-bottom: 2vh;
+  }
+
+  .skills label {
+    font-size: 3vw;
+    margin-top: 1.25rem;
   }
 
   .techs .svg-inline--fa {
@@ -866,6 +849,16 @@ footer .r-icon a:hover {
 
   .linkListCol {
     height: auto !important;
+  }
+
+  .skillsHeadline h3 {
+    font-size: 2.4vw;
+    margin-bottom: 2vh;
+  }
+
+  .skills label {
+    font-size: 2vw;
+    margin-top: 1.25rem;
   }
 
   .popUpContent {
