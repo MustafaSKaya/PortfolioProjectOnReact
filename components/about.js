@@ -23,7 +23,7 @@ export default function About(props) {
     })
 
     return (
-        <section ref={ref} className="about padding4section" id="about">
+        <section className="about padding4section" id="about">
             <AnimatePresence>
                 <div className="container">
                     <div className='row'>
@@ -73,7 +73,7 @@ export default function About(props) {
                             </div>
                         </div>
                         <div className='col-lg-4 rightRow'>
-                            <motion.div initial={{ y: 100, opacity: 0 }}
+                            <motion.div ref={ref} initial={{ y: 100, opacity: 0 }}
                                 animate={inView ? { y: 0, opacity: 1 } : ''}
                                 transition={inView ? { duration: .75, delay: aDelay * 2.5 } : ''} className='col aboutCol h-75 d-inline-block'>
                                 <motion.p initial={{ opacity: 0 }}
@@ -83,7 +83,7 @@ export default function About(props) {
                             <motion.div initial={{ y: 100, opacity: 0 }}
                                 animate={inView ? { y: 0, opacity: 1 } : ''}
                                 transition={inView ? { duration: .75, delay: aDelay * 5.75 } : ''} className='col aboutCol linkListCol w-100 p-3 h-25'>
-                                <div ref={ref} className="list-inline displayMiddle">
+                                <div className="list-inline displayMiddle">
                                     <motion.li initial={{ opacity: 0 }}
                                         animate={inView ? { opacity: 1 } : ''}
                                         transition={inView ? { duration: 2, delay: aDelay * 6 } : ''} className="list-inline-item"><a href={props.linkedinLink} target="_blank" rel="noreferrer"><FontAwesomeIcon icon={faLinkedin} /></a></motion.li>

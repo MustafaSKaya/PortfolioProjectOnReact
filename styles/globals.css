@@ -887,6 +887,39 @@ footer .r-icon a:hover {
   }
 }
 
+@media (min-width: 1921px) and (max-width: 2561px) {
+  p {
+    font-size: 0.7vw !important;
+    line-height: 1.4vh !important; 
+  }
+
+  .headerRow {
+    height: 20vh;
+  }
+
+  .element1 {
+    font-size: 1.6vw;
+    line-height: 2vh;
+  }
+  
+  .element2 {
+    font-size: 1.2vw;
+    line-height: 2vh;
+  }
+
+  .aboutCol h2 {
+    font-size: 1.2vw;
+  }
+  
+  .aboutCol h3 {
+    font-size: 1.1vw;
+  }
+  
+  .aboutCol h4 {
+    font-size: 1vw;
+  }
+}
+
 
 
 

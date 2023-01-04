@@ -20,7 +20,7 @@ export default function Skills({ skillsHeadline, skills }) {
                         </motion.div>
                         <div className="col-lg-6 techs mb-4">
                             <div className="row">
-                                {skills.map((skill, index) => <motion.div key={skill.fields.label} initial={{ x: 45, opacity: 0 }} animate={inView ? { x: 0, opacity: 1 } : ''} transition={{ delay: index * .1 }} className='col-lg-4 col-md-4 col-sm-4 col-6 d-flex justify-content-start mt-3'>
+                                {skills.map((skill, index) => <motion.div key={skill.fields.label} initial={{ y: 200, opacity: 0 }} animate={inView ? { y: 0, opacity: 1 } : ''} transition={{ delay: index * .2 }} className='col-lg-4 col-md-4 col-sm-4 col-6 d-flex justify-content-start mt-3'>
                                     <Image src={`https:${skill.fields.image.fields.file.url}`} height={skill.fields.image.fields.file.details.image.height} width={skill.fields.image.fields.file.details.image.width} alt={skill.fields.alt} className="svg-inline--fa logo" />
                                     <label className='px-3 text-break'>{skill.fields.label}</label>
                                 </motion.div>)}
