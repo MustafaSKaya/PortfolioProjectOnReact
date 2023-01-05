@@ -58,15 +58,19 @@ const temporaryProjectsArrayofObjects = [
         name: "TinyApp",
         imageURL: Project13Photo,
         popUpImg: Project14Photo,
-        madeWith: ["Javascript"]
+        madeWith: ["Javascript", "Node.js", "Express"]
     }
 ]
 
-export default function Projects() {
+export default function Projects({ projectHeadline, projectHeadlineDesc, projectButtons, projects }) {
 
-    const [filtered, setFiltered] = useState(temporaryProjectsArrayofObjects);
-    const [selectedProject, setSelectedProject] = useState(false);
+    //console.log(projects)
+
+    const [filtered, setFiltered] = useState(projects);
     const [activeFilter, setActiveFilter] = useState("All");
+    const [selectedProject, setSelectedProject] = useState(false);
+    
+    //console.log("selectedProject", selectedProject)
 
     const togglePopUp = () => {
         setSelectedProject(false);
@@ -91,11 +95,11 @@ export default function Projects() {
         }
 
         if (activeFilter === "All") {
-            setFiltered(temporaryProjectsArrayofObjects);
+            setFiltered(projects);
             return
         };
 
-        setFiltered(temporaryProjectsArrayofObjects.filter((project) => project.madeWith.includes(activeFilter)));
+        setFiltered(projects.filter((project) => project.fields.madeWith.split(" ").includes(activeFilter)));
 
         //console.log(filtered);
 
@@ -112,25 +116,20 @@ export default function Projects() {
                 </div>
                 <div className="row">
                     <div className="col-12 mx-auto mb-3">
-                        <button onClick={() => setActiveFilter("All")} className="btn btn-outline-info my-1">All</button>
-
-                        <button onClick={() => setActiveFilter("jQuery")}
-                            className="btn btn-outline-info my-1">jQuery/Javascript</button>
-                        <button onClick={() => setActiveFilter("React")}
-                            className="btn btn-outline-info my-1">React/Javascript</button>
-                        <button onClick={() => setActiveFilter("React")}
-                            className="btn btn-outline-info my-1">React/Javascript</button>
+                        {projectButtons.map((button) => 
+                        <button onClick={() => setActiveFilter(button.fields.buttonKey)} className={activeFilter === button.fields.buttonKey ? `btn btn-info my-1` : `btn btn-outline-info my-1`}>{button.fields.buttonName}
+                        </button>)}
                     </div>
                 </div>
                 <motion.div layout className="container">
                     <div className="row d-flex justify-content-evenly">
                         <AnimatePresence>
-                            {filtered.map((project) => {
-                                return <motion.div layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} key={project.id} className="col-lg-4 col-md-6 col-sm-12 col-xs-12 card-wrapper">
-                                    <Image src={project.imageURL} href="" className="img-fluid" alt=""></Image>
+                            {filtered.map((project, index) => {
+                                return <motion.div layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} key={index} className="col-lg-4 col-md-6 col-sm-12 col-xs-12 card-wrapper">
+                                    <Image src={`https:${project.fields.thumbnailImage.fields.file.url}`} width={project.fields.thumbnailImage.fields.file.details.image.width} height={project.fields.thumbnailImage.fields.file.details.image.height} href="" className="img-fluid" alt=""></Image>
                                     <div className="overlay">
-                                        <h3 className='projectTitle'>{project.name}</h3>
-                                        <button onClick={() => { setSelectedProject(temporaryProjectsArrayofObjects[project.id]) }}
+                                        <h3 className='projectTitle'>{project.fields.name}</h3>
+                                        <button onClick={() => { setSelectedProject(projects[index]) }}
                                             className='btn btn-info my-1'>More Details</button>
                                     </div>
                                 </motion.div>
@@ -146,22 +145,15 @@ export default function Projects() {
                         <div onClick={togglePopUp} className="popUpOverlay"></div>
                         <div className="col-lg-6 col-md-9 col-sm-8 col-11 popUpContent">
                             <div className='picContainer'>
-                                <Image src={selectedProject.popUpImg} href="" className="popUpImg" alt=""></Image>
+                                <Image src={`https:${selectedProject.fields.popUpImage.fields.file.url}`} width={selectedProject.fields.popUpImage.fields.file.details.image.width} height={selectedProject.fields.popUpImage.fields.file.details.image.height} href="" className="popUpImg" alt=""></Image>
                             </div>
                             <div className='descriptionCont'>
-                                <h2 className='projectTitle'>{selectedProject.name}</h2>
-                                <p className='projectTechs'>{madeWithString(selectedProject.madeWith)}</p>
+                                <h2 className='projectTitle'>{selectedProject.fields.name}</h2>
+                                <p className='projectTechs'>{selectedProject.fields.madeWith}</p>
                                 <div className='project-border'></div>
-                                <p className='projectDesc'>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-                                    perferendis suscipit officia recusandae, eveniet quaerat assumenda
-                                    id fugit, dignissimos maxime non natus placeat illo iusto!
-                                    Sapiente dolorum id maiores dolores? Illum pariatur possimus
-                                    quaerat ipsum quos molestiae rem aspernatur dicta tenetur. Sunt
-                                    placeat tempora vitae enim incidunt porro fuga ea.
-                                </p>
+                                <p className='projectDesc'>{selectedProject.fields.projectDesc}</p>
                                 <button className="btn btn-dark closeButton" onClick={togglePopUp}>X</button>
-                                <button className='btn btn-dark linkButton'><FontAwesomeIcon icon={faGithub} />GitHub Link</button>
+                                <a href={selectedProject.fields.projectLink} target="_blank" rel="noreferrer" className='btn btn-dark linkButton'><FontAwesomeIcon icon={faGithub} />GitHub Link</a>
                             </div>
                         </div>
                     </motion.div>
