@@ -384,6 +384,14 @@ header {
   transition: .5s ease-in-out;
 }
 
+.btn-info {
+  color: #fff;
+}
+
+.btn-info:hover {
+  color: #fff;
+}
+
 .overlay {
   position: absolute;
   top: 0;

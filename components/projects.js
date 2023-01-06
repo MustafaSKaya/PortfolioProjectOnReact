@@ -71,7 +71,7 @@ export default function Projects({ projectHeadline, projectHeadlineDesc, project
                     <div className="row d-flex justify-content-evenly">
                         <AnimatePresence>
                             {filtered.map((project, index) => {
-                                return <motion.div layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} key={index} className="col-lg-4 col-md-6 col-sm-12 col-xs-12 card-wrapper">
+                                return <motion.div layout initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} key={project.fields.name} className="col-lg-4 col-md-6 col-sm-12 col-xs-12 card-wrapper">
                                     <Image src={`https:${project.fields.thumbnailImage.fields.file.url}`} width={project.fields.thumbnailImage.fields.file.details.image.width} height={project.fields.thumbnailImage.fields.file.details.image.height} href="" className="img-fluid" alt=""></Image>
                                     <div className="overlay">
                                         <h3 className='projectTitle'>{project.fields.name}</h3>
