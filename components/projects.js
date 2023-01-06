@@ -1,66 +1,8 @@
 import Image from 'next/image';
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
-import Project2Photo from '../public/LHLMidtermPopUp.png';
-import Project3Photo from '../public/LHLMidtermThumbnail.png';
-import Project4Photo from '../public/HeyNeighboursThumbnail.gif';
-import Project6Photo from '../public/HeyNeighboursPopUp.jpg';
-import Project7Photo from '../public/InterviewSchedulerThumbnail.jpg';
-import Project8Photo from '../public/InterviewSchedulerPopUp.jpg';
-import Project9Photo from '../public/MyTweeterThumbnail.jpg';
-import Project10Photo from '../public/MyTweeterPopUp.jpg';
-import Project11Photo from '../public/JungleThumbnail.jpg';
-import Project12Photo from '../public/JunglePopUp.jpg';
-import Project13Photo from '../public/TinyAppThumbnail.jpg';
-import Project14Photo from '../public/TinyAppPopUp.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
-import { redirect } from 'next/dist/server/api-utils';
-
-const temporaryProjectsArrayofObjects = [
-    {
-        id: 0,
-        name: "Hey Neighbours",
-        imageURL: Project4Photo,
-        popUpImg: Project6Photo,
-        madeWith: ["Javascript", "React", "PostgreSQL",]
-    },
-    {
-        id: 1,
-        name: "ToDo List",
-        imageURL: Project3Photo,
-        popUpImg: Project2Photo,
-        madeWith: ["Javascript", "jQuery", "PostgreSQL"]
-    },
-    {
-        id: 2,
-        name: "Interview Scheduler",
-        imageURL: Project7Photo,
-        popUpImg: Project8Photo,
-        madeWith: ["Javascript", "React", "PostgreSQL"]
-    },
-    {
-        id: 3,
-        name: "MyTweeter",
-        imageURL: Project9Photo,
-        popUpImg: Project10Photo,
-        madeWith: ["Javascript", "jQuery"]
-    },
-    {
-        id: 4,
-        name: "JungleOnRails",
-        imageURL: Project11Photo,
-        popUpImg: Project12Photo,
-        madeWith: ["Ruby", "Rails"]
-    },
-    {
-        id: 5,
-        name: "TinyApp",
-        imageURL: Project13Photo,
-        popUpImg: Project14Photo,
-        madeWith: ["Javascript", "Node.js", "Express"]
-    }
-]
 
 export default function Projects({ projectHeadline, projectHeadlineDesc, projectButtons, projects }) {
 
@@ -76,10 +18,14 @@ export default function Projects({ projectHeadline, projectHeadlineDesc, project
         setSelectedProject(false);
     };
 
-    const madeWithString = (array) => {
-        let str = '';
-        for (let i = 0; i < array.length; i++) {
-            str += "#" + array[i] + " ";
+    const addingHashtags = (string) => {
+        let str = '#';
+        for (let i = 0; i < string.length; i++) {
+            if (string[i] === " ") {
+                str += " #";
+            } else {
+                str += string[i];
+            }
         }
         return str;
     }
@@ -110,14 +56,14 @@ export default function Projects({ projectHeadline, projectHeadlineDesc, project
             <div className="container text-center">
                 <div className="row">
                     <div className="col mb-2">
-                        <h2>Projects</h2>
-                        <p>I have worked on</p>
+                        <h2>{projectHeadline}</h2>
+                        <p>{projectHeadlineDesc}</p>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-12 mx-auto mb-3">
                         {projectButtons.map((button) => 
-                        <button onClick={() => setActiveFilter(button.fields.buttonKey)} className={activeFilter === button.fields.buttonKey ? `btn btn-info my-1` : `btn btn-outline-info my-1`}>{button.fields.buttonName}
+                        <button onClick={() => setActiveFilter(button.fields.buttonKey)} key={button.fields.buttonKey} className={activeFilter === button.fields.buttonKey ? `btn btn-info my-1` : `btn btn-outline-info my-1`}>{button.fields.buttonName}
                         </button>)}
                     </div>
                 </div>
@@ -149,7 +95,7 @@ export default function Projects({ projectHeadline, projectHeadlineDesc, project
                             </div>
                             <div className='descriptionCont'>
                                 <h2 className='projectTitle'>{selectedProject.fields.name}</h2>
-                                <p className='projectTechs'>{selectedProject.fields.madeWith}</p>
+                                <p className='projectTechs'>{addingHashtags(selectedProject.fields.madeWith)}</p>
                                 <div className='project-border'></div>
                                 <p className='projectDesc'>{selectedProject.fields.projectDesc}</p>
                                 <button className="btn btn-dark closeButton" onClick={togglePopUp}>X</button>
