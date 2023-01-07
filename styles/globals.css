@@ -786,7 +786,7 @@ footer .r-icon a:hover {
   }
 
   .popUpImg:hover {
-    transform: translate3d(0, -65.5%, 0);
+    transform: translate3d(0, -76.5%, 0);
   }
 
   .closeButton {
@@ -942,14 +942,25 @@ footer .r-icon a:hover {
 
   .aboutCol h2 {
     font-size: 1.2vw;
+    margin-bottom: 0;
   }
   
   .aboutCol h3 {
     font-size: 1.1vw;
+    margin-bottom: 0;
   }
   
   .aboutCol h4 {
     font-size: 1vw;
+    margin-bottom: 0;
+  }
+
+  .picContainer {
+    height: 46.5vh;
+  }
+
+  .popUpImg:hover {
+    transform: translate3d(0, -74.5%, 0);
   }
 }
 
