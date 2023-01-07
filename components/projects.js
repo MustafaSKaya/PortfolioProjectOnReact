@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faSquareXmark } from '@fortawesome/free-solid-svg-icons';
 
 export default function Projects({ projectHeadline, projectHeadlineDesc, projectButtons, projects }) {
 
@@ -76,7 +77,7 @@ export default function Projects({ projectHeadline, projectHeadlineDesc, project
                                     <div className="overlay">
                                         <h3 className='projectTitle'>{project.fields.name}</h3>
                                         <button onClick={() => { setSelectedProject(projects[index]) }}
-                                            className='btn btn-info my-1'>More Details</button>
+                                            className='btn btn-outline-info my-1'>More Details</button>
                                     </div>
                                 </motion.div>
                             }
@@ -98,7 +99,7 @@ export default function Projects({ projectHeadline, projectHeadlineDesc, project
                                 <p className='projectTechs'>{addingHashtags(selectedProject.fields.madeWith)}</p>
                                 <div className='project-border'></div>
                                 <p className='projectDesc'>{selectedProject.fields.projectDesc}</p>
-                                <button className="btn btn-dark closeButton" onClick={togglePopUp}>X</button>
+                                <FontAwesomeIcon className="btn closeButton" onClick={togglePopUp} icon={faSquareXmark} />
                                 <a href={selectedProject.fields.projectLink} target="_blank" rel="noreferrer" className='btn btn-dark linkButton'><FontAwesomeIcon icon={faGithub} />GitHub Link</a>
                             </div>
                         </div>

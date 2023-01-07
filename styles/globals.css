@@ -405,7 +405,9 @@ header {
 }
 
 .projectTitle {
-  color: #1E90FF;
+  color: #0080ff;
+  font-weight: 1000;
+  font-size: 2vh;
 }
 
 .projectTechs {
@@ -453,7 +455,7 @@ header {
 
 .picContainer {
   width: auto;
-  height: 50vh;
+  height: 52.5vh;
   overflow: hidden;
 }
 
@@ -471,7 +473,7 @@ header {
 
 .popUpContent {
   position: fixed;
-  height: 84vh;
+  height: 80vh;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -488,10 +490,14 @@ header {
   position: absolute;
   top: 10px;
   right: 10px;
-  padding: 5px 7px;
+  height: 3vh;
+  width: 3vw;
 }
 
 .linkButton {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
   padding: 0 .5rem 0 .5rem;
 }
 
@@ -754,23 +760,42 @@ footer .r-icon a:hover {
   }
 
   .projectTitle {
-    font-size: 1.5rem;
+    font-size: 2vh;
+  }
+
+  .projectTechs {
+    font-size: 1.2vh !important;
+    margin-bottom: 0 !important;
+  }
+
+  .projectDesc {
+    font-size: 1.4vh !important;
+    line-height: 1.6vh !important;
   }
 
   .popUpContent {
-    height: auto;
+    height: 60%;
   }
 
   .picContainer {
-    height: 32.5vh;
+    height: 28.5vh;
   }
 
   .popUpImg {
-    height: 100vh;
+    height: 120vh;
   }
 
   .popUpImg:hover {
     transform: translate3d(0, -65.5%, 0);
+  }
+
+  .closeButton {
+    height: 3vh;
+    width: 5vw;
+  }
+
+  .linkButton {
+    padding: .5vh 1vw !important;
   }
 
   .recommendations .test-item .test-img {
@@ -870,19 +895,19 @@ footer .r-icon a:hover {
   }
 
   .popUpContent {
-    height: 65%;
+    height: 70%;
   }
 
   .picContainer {
-    height: 45%;
+    height: 50%;
   }
 
   .popUpImg {
-    height: 59vh;
+    height: 140vh;
   }
 
   .popUpImg:hover {
-    transform: translate3d(0, -48.5%, 0);
+    transform: translate3d(0, -75%, 0);
   }
 
   .servicesDesc {
@@ -898,7 +923,7 @@ footer .r-icon a:hover {
 @media (min-width: 1921px) and (max-width: 2561px) {
   p {
     font-size: 0.7vw !important;
-    line-height: 1.4vh !important; 
+    line-height: 2vh !important; 
   }
 
   .headerRow {
