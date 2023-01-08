@@ -52,8 +52,8 @@ export default function Recommendations({ recomHeadline, recomHeadlineDesc, reco
                 <div className="row">
                     <div className="col">
                         <OwlCarousel className="owl-theme" items={amountOfReco} autoplay={true} loop={true}>
-                            {recommendations.map((elem) => {
-                                return <div className="item">
+                            {recommendations.map((elem, index) => {
+                                return <div key={index} className="item">
                                     <div className="test-item text-center">
                                         <FontAwesomeIcon icon={faQuoteLeft} />
                                         <div><Image src={`https:${elem.fields.profilePhoto.fields.file.url}`} height={elem.fields.profilePhoto.fields.file.details.image.height} width={elem.fields.profilePhoto.fields.file.details.image.width} alt={elem.fields.referencer} className="mx-auto rounded-circle test-img"></Image></div>
