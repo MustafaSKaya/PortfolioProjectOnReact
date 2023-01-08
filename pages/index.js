@@ -42,15 +42,6 @@ export default function Home(props) {
   const linkedinLink = props.linkedinLink;
   const skillsHeadline = props.skillsHeadline;
   const skills = props.skills;
-  const projectHeadline = props.projectHeadline;
-  const projetcHeadlineDesc =  props.projectHeadlineDesc;
-  const projectButtons = props.projectButtons;
-  const projects = props.projects;
-  const servicesHeadline = props.servicesHeadline;
-  const servicesHeadlineDesc = props.servicesHeadlineDesc;
-  const backEndDevDesc = props.backEndDevDesc;
-  const frontEndDevDesc = props.frontEndDevDesc;
-  const unitTestingDesc = props.unitTestingDesc;
 
   return (
     <div>
@@ -58,9 +49,9 @@ export default function Home(props) {
       <Header headerQuote1={headerQuote1} headerQuote2={headerQuote2}/>
       <About aboutName={aboutName} aboutProfession={aboutProfession} aboutPPhoto={aboutPPhoto} aboutSummary={aboutSummary} aboutPhilosophy={aboutPhilosophy} githubLink={githubLink} linkedinLink={linkedinLink} aboutCharacterHeadlines={aboutCharacterHeadlines} />
       <Skills skillsHeadline={skillsHeadline} skills={skills}/>
-      <Projects projectHeadline={projectHeadline} projectHeadlineDesc={projetcHeadlineDesc} projectButtons={projectButtons} projects={projects}/>
+      <Projects projectHeadline={props.projectHeadline} projectHeadlineDesc={props.projectHeadlineDesc} projectButtons={props.projectButtons} projects={props.projects}/>
       <Services servicesHeadline={props.servicesHeadline} servicesHeadlineDesc={props.servicesHeadlineDesc} backEndDevDesc={props.backEndDevDesc} frontEndDevDesc={props.frontEndDevDesc} unitTestingDesc={props.unitTestingDesc}/>
-      <Recommendations/>
+      <Recommendations recomHeadline={props.recomHeadline} recomHeadlineDesc={props.recomHeadlineDesc} recommendations={props.recommendations}/>
       <Contact/>
       <Footer/>
     </div>

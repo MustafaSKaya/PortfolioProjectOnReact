@@ -15,24 +15,26 @@ if (typeof window !== "undefined") {
     window.$ = window.jQuery = require("jquery");
 }
 
-export default function Recommendations() {
+export default function Recommendations({ recomHeadline, recomHeadlineDesc, recommendations }) {
 
-    const [amountOfReco, setAmountOfReco] = useState();
+    console.log("reco", recommendations)
+
+    const [amountOfReco, setAmountOfReco] = useState(1);
     const [windowWidth, setWindowWidth] = useState();
 
     useEffect(() => {
         let cb = function () {
             setWindowWidth(window.innerWidth);
-          };
+        };
         window.addEventListener("resize", cb);
         if (windowWidth <= 768) {
             setAmountOfReco(1);
             return
-        } else if (windowWidth >= 769 && windowWidth <= 992) {
+        } else if (windowWidth >= 769 && windowWidth <= 1200) {
             setAmountOfReco(2);
             return
         } else {
-            setAmountOfReco(3);
+            setAmountOfReco(2);
             return
         };
 
@@ -43,53 +45,24 @@ export default function Recommendations() {
             <div className="container text-center">
                 <div className="row">
                     <div className="col way-fade-right">
-                        <h2>Recommendations</h2>
-                        <p>Kind words from friends</p>
+                        <h2>{recomHeadline}</h2>
+                        <p>{recomHeadlineDesc}</p>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col">
-                        <OwlCarousel className="owl-theme" items={amountOfReco} autoplay={true} loop={true} >
-
-                            <div className="item">
-                                <div className="test-item text-center">
-                                    <FontAwesomeIcon icon={faQuoteLeft} />
-                                    <div><Image src={profilePhoto} className="mx-auto rounded-circle test-img" alt="#"></Image></div>
-                                    <p className="text-muted font-italic mt-3 px-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore fugiat quidem hic dicta incidunt.</p>
-                                    <p className="test-name">Jessi Walter, Ceo Murno.com</p>
+                        <OwlCarousel className="owl-theme" items={amountOfReco} autoplay={true} loop={true}>
+                            {recommendations.map((elem) => {
+                                return <div className="item">
+                                    <div className="test-item text-center">
+                                        <FontAwesomeIcon icon={faQuoteLeft} />
+                                        <div><Image src={`https:${elem.fields.profilePhoto.fields.file.url}`} height={elem.fields.profilePhoto.fields.file.details.image.height} width={elem.fields.profilePhoto.fields.file.details.image.width} alt={elem.fields.referencer} className="mx-auto rounded-circle test-img"></Image></div>
+                                        <p className="text-muted font-italic mt-3 px-4">{elem.fields.fewKindWords}</p>
+                                        <p className="test-name">{elem.fields.referencer}</p>
+                                    </div>
                                 </div>
-                            </div>
-
-                            <div className="item">
-                                <div className="test-item text-center">
-                                    <FontAwesomeIcon icon={faQuoteLeft} />
-                                    <div><Image src={profilePhoto} className="mx-auto rounded-circle test-img" alt="#"></Image></div>
-                                    <p className="text-muted font-italic mt-3 px-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore fugiat quidem hic dicta incidunt.</p>
-                                    <p className="test-name">Caron Smith, Ceo Lopra.com</p>
-                                </div>
-                            </div>
-
-                            <div className="item">
-                                <div className="test-item text-center">
-                                    <FontAwesomeIcon icon={faQuoteLeft} />
-                                    <div><Image src={profilePhoto} className="mx-auto rounded-circle test-img" alt="#"></Image></div>
-                                    <p className="text-muted font-italic mt-3 px-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore fugiat quidem hic dicta incidunt.</p>
-                                    <p className="test-name">Alan Harper, Ceo thm.com</p>
-                                </div>
-                            </div>
-
-                            <div className="item">
-                                <div className="test-item text-center">
-                                    <FontAwesomeIcon icon={faQuoteLeft} />
-                                    <div><Image src={profilePhoto} className="mx-auto rounded-circle test-img" alt="#"></Image></div>
-                                    <p className="text-muted font-italic mt-3 px-4">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Labore fugiat quidem hic dicta incidunt.</p>
-                                    <p className="test-name">Jessi Walter, Ceo Murno.com</p>
-                                </div>
-                            </div>
-
+                            })}
                         </OwlCarousel>
-
-
                     </div>
                 </div>
             </div>
