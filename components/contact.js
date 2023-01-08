@@ -1,9 +1,9 @@
 import React, { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMobileAlt, faEnvelope, faMapPin } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faMapPin } from '@fortawesome/free-solid-svg-icons';
 
-export default function Contact() {
+export default function Contact({ contactHeadline, contactHeadlineDesc, contactEmail, contactWhereabouts }) {
 
     const form = useRef();
 
@@ -24,17 +24,17 @@ export default function Contact() {
             <div className="container text-center">
                 <div className="row">
                     <div className="col way-fade-left">
-                        <h2>Contact Me</h2>
-                        <p>Feel free to reach me.</p>
+                        <h2>{contactHeadline}</h2>
+                        <p>{contactHeadlineDesc}</p>
                     </div>
                 </div>
-                <div className="row way-fade-left ">
+                <div className="row d-flex justify-content-around">
 
                     <div className="col-md-4">
                         <div className="r-icon"><FontAwesomeIcon icon={faEnvelope} /></div>
                         <div className="text-center">
                             <h5>Email</h5>
-                            <p className="text-muted">mustafakya88@hotmail.com</p>
+                            <p className="text-muted">{contactEmail}</p>
 
                         </div>
                     </div>
@@ -43,7 +43,7 @@ export default function Contact() {
                         <div className="r-icon"><FontAwesomeIcon icon={faMapPin} /></div>
                         <div className="text-center">
                             <h5>Visit Me</h5>
-                            <p className="text-muted">Ottawa/Canada</p>
+                            <p className="text-muted">{contactWhereabouts}</p>
 
                         </div>
                     </div>

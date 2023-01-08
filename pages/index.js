@@ -27,33 +27,20 @@ export async function getStaticProps() {
 }
 
 export default function Home(props) {
-  console.log("dynamicProps are ", props);
 
-  const navTitle = props.navTitle;
-  const headerQuote1 = props.headerQuote1;
-  const headerQuote2 = props.headerQuote2;
-  const aboutName = props.aboutName;
-  const aboutProfession = props.aboutProfession;
-  const aboutPPhoto = props.aboutPPhoto;
-  const aboutSummary = props.aboutSummary;
-  const aboutPhilosophy = props.aboutPhilosophy;
-  const aboutCharacterHeadlines = props.aboutCharacterHeadlines
-  const githubLink = props.githubLink;
-  const linkedinLink = props.linkedinLink;
-  const skillsHeadline = props.skillsHeadline;
-  const skills = props.skills;
+  //console.log("dynamicProps are ", props);
 
   return (
     <div>
-      <Navigation navTitle={navTitle}/>
-      <Header headerQuote1={headerQuote1} headerQuote2={headerQuote2}/>
-      <About aboutName={aboutName} aboutProfession={aboutProfession} aboutPPhoto={aboutPPhoto} aboutSummary={aboutSummary} aboutPhilosophy={aboutPhilosophy} githubLink={githubLink} linkedinLink={linkedinLink} aboutCharacterHeadlines={aboutCharacterHeadlines} />
-      <Skills skillsHeadline={skillsHeadline} skills={skills}/>
+      <Navigation navTitle={props.navTitle}/>
+      <Header headerQuote1={props.headerQuote1} headerQuote2={props.headerQuote2}/>
+      <About aboutName={props.aboutName} aboutProfession={props.aboutProfession} aboutPPhoto={props.aboutPPhoto} aboutSummary={props.aboutSummary} aboutPhilosophy={props.aboutPhilosophy} githubLink={props.githubLink} linkedinLink={props.linkedinLink} aboutCharacterHeadlines={props.aboutCharacterHeadlines} />
+      <Skills skillsHeadline={props.skillsHeadline} skills={props.skills}/>
       <Projects projectHeadline={props.projectHeadline} projectHeadlineDesc={props.projectHeadlineDesc} projectButtons={props.projectButtons} projects={props.projects}/>
       <Services servicesHeadline={props.servicesHeadline} servicesHeadlineDesc={props.servicesHeadlineDesc} backEndDevDesc={props.backEndDevDesc} frontEndDevDesc={props.frontEndDevDesc} unitTestingDesc={props.unitTestingDesc}/>
       <Recommendations recomHeadline={props.recomHeadline} recomHeadlineDesc={props.recomHeadlineDesc} recommendations={props.recommendations}/>
-      <Contact/>
-      <Footer/>
+      <Contact contactHeadline={props.contactHeadline} contactHeadlineDesc={props.contactHeadlineDesc} contactEmail={props.contactEmail} contactWhereabouts={props.contactWhereabouts}/>
+      <Footer githubLink={props.githubLink} linkedinLink={props.linkedinLink} footerNote={props.footerNote}/>
     </div>
   )
 }

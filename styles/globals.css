@@ -607,7 +607,7 @@ footer {
   background-color: #333333;
 }
 footer .r-icon a {
-  font-size: 20px;
+  font-size: 2rem;
   color: #848484;
   padding: 1rem;
   border: 1px solid #848484;
@@ -624,8 +624,8 @@ footer .r-icon a:hover {
 }
 
 .list-inline-item .svg-inline--fa {
-  width: 20px;
-  height: 20px;
+  width: 2rem;
+  height: 2rem;
 }
 
 .footer-link-list {
@@ -802,6 +802,16 @@ footer .r-icon a:hover {
   .recommendations .test-item .test-img {
     width: 15rem;
     height: 15rem;
+  }
+
+  footer .r-icon a {
+    font-size: 1rem;
+    padding: .6rem;
+  }
+
+  .list-inline-item .svg-inline--fa {
+    width: 1rem;
+    height: 1rem;
   }
 }
 
