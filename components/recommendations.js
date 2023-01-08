@@ -17,16 +17,21 @@ if (typeof window !== "undefined") {
 
 export default function Recommendations({ recomHeadline, recomHeadlineDesc, recommendations }) {
 
-    console.log("reco", recommendations)
+    //console.log("reco", recommendations)
 
     const [amountOfReco, setAmountOfReco] = useState(1);
-    const [windowWidth, setWindowWidth] = useState();
+    const [windowWidth, setWindowWidth] = useState(765);
 
     useEffect(() => {
+        if ((typeof window !== "undefined")) {
+            setWindowWidth(window.innerWidth);
+        }
+        
         let cb = function () {
             setWindowWidth(window.innerWidth);
         };
         window.addEventListener("resize", cb);
+
         if (windowWidth <= 768) {
             setAmountOfReco(1);
             return
