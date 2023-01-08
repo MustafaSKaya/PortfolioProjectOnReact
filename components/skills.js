@@ -9,9 +9,9 @@ export default function Skills({ skillsHeadline, skills }) {
     const { ref, inView } = useInView();
 
     return (
-        <section className="skills mb-5" id="skills">
+        <section ref={ref} className="skills padding4section" id="skills">
             <AnimatePresence>
-                <motion.div layout ref={ref} className="container">
+                <motion.div layout className="container">
                     <div className="row">
                         <motion.div initial={{ x: -200, opacity: 0 }}
                             animate={inView ? { x: 0, opacity: 1 } : ''}

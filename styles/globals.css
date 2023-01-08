@@ -321,9 +321,9 @@ header {
 
 /* Skills Section*/
 
-/*.skills {
-  background-color: #dcf1f485;
-}*/
+.skills {
+  padding-top: 4.2rem;
+}
 
 .skills .progress {
   height: 1.20rem;
@@ -514,6 +514,7 @@ header {
 .card {
   margin: 1rem 0 1rem 0;
   background: #f8f9fa;
+  height: 100%;
 }
 
 .cardPosition {

@@ -46,6 +46,11 @@ export default function Home(props) {
   const projetcHeadlineDesc =  props.projectHeadlineDesc;
   const projectButtons = props.projectButtons;
   const projects = props.projects;
+  const servicesHeadline = props.servicesHeadline;
+  const servicesHeadlineDesc = props.servicesHeadlineDesc;
+  const backEndDevDesc = props.backEndDevDesc;
+  const frontEndDevDesc = props.frontEndDevDesc;
+  const unitTestingDesc = props.unitTestingDesc;
 
   return (
     <div>
@@ -54,7 +59,7 @@ export default function Home(props) {
       <About aboutName={aboutName} aboutProfession={aboutProfession} aboutPPhoto={aboutPPhoto} aboutSummary={aboutSummary} aboutPhilosophy={aboutPhilosophy} githubLink={githubLink} linkedinLink={linkedinLink} aboutCharacterHeadlines={aboutCharacterHeadlines} />
       <Skills skillsHeadline={skillsHeadline} skills={skills}/>
       <Projects projectHeadline={projectHeadline} projectHeadlineDesc={projetcHeadlineDesc} projectButtons={projectButtons} projects={projects}/>
-      <Services/>
+      <Services servicesHeadline={props.servicesHeadline} servicesHeadlineDesc={props.servicesHeadlineDesc} backEndDevDesc={props.backEndDevDesc} frontEndDevDesc={props.frontEndDevDesc} unitTestingDesc={props.unitTestingDesc}/>
       <Recommendations/>
       <Contact/>
       <Footer/>

@@ -23,7 +23,7 @@ export default function About(props) {
     })
 
     return (
-        <section className="about padding4section" id="about">
+        <section className="about my-5" id="about">
             <AnimatePresence>
                 <div className="container">
                     <div className='row'>
