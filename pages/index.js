@@ -28,13 +28,13 @@ export async function getStaticProps() {
 
 export default function Home(props) {
 
-  //console.log("dynamicProps are ", props);
+  console.log("dynamicProps are ", props);
 
   return (
     <div>
       <Navigation navTitle={props.navTitle}/>
       <Header headerQuote1={props.headerQuote1} headerQuote2={props.headerQuote2}/>
-      <About aboutName={props.aboutName} aboutProfession={props.aboutProfession} aboutPPhoto={props.aboutPPhoto} aboutSummary={props.aboutSummary} aboutPhilosophy={props.aboutPhilosophy} githubLink={props.githubLink} linkedinLink={props.linkedinLink} aboutCharacterHeadlines={props.aboutCharacterHeadlines} />
+      <About aboutName={props.aboutName} aboutProfession={props.aboutProfession} aboutPPhoto={props.aboutPPhoto} aboutSummary={props.aboutSummary} aboutPhilosophy={props.aboutPhilosophy} githubLink={props.githubLink} linkedinLink={props.linkedinLink} aboutCharacterHeadlines={props.aboutCharacterHeadlines}/>
       <Skills skillsHeadline={props.skillsHeadline} skills={props.skills}/>
       <Projects projectHeadline={props.projectHeadline} projectHeadlineDesc={props.projectHeadlineDesc} projectButtons={props.projectButtons} projects={props.projects}/>
       <Services servicesHeadline={props.servicesHeadline} servicesHeadlineDesc={props.servicesHeadlineDesc} backEndDevDesc={props.backEndDevDesc} frontEndDevDesc={props.frontEndDevDesc} unitTestingDesc={props.unitTestingDesc}/>
