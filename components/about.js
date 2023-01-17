@@ -69,8 +69,8 @@ export default function About(props) {
                                     <motion.p initial={{ opacity: 0 }}
                                         animate={inView ? { opacity: 1 } : ''}
                                         transition={inView ? { duration: 1, delay: aDelay * 3.5 } : ''} className="text-start">
-                                        {props.aboutPhilosophy.content.map((paragraph) => {
-                                            return <span>{paragraph.content[0].value}<br/><br/></span>
+                                        {props.aboutPhilosophy.content.map((paragraph, index) => {
+                                            return <span key={index}>{paragraph.content[0].value}<br/><br/></span>
                                         })}
                                     </motion.p>
                                 </motion.div>
@@ -82,8 +82,8 @@ export default function About(props) {
                                 transition={inView ? { duration: .75, delay: aDelay * 2.5 } : ''} className='col aboutCol h-75 d-inline-block'>
                                 <motion.p initial={{ opacity: 0 }}
                                     animate={inView ? { opacity: 1 } : ''}
-                                    transition={inView ? { duration: 1, delay: aDelay * 3 } : ''} className="text-start">{props.aboutSummary.content.map((paragraph) => {
-                                        return <span>{paragraph.content[0].value}<br/><br/></span>
+                                    transition={inView ? { duration: 1, delay: aDelay * 3 } : ''} className="text-start">{props.aboutSummary.content.map((paragraph, index) => {
+                                        return <span key={index}>{paragraph.content[0].value}<br/><br/></span>
                                     })}
                                 </motion.p>
                             </motion.div>
