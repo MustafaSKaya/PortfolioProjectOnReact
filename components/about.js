@@ -8,7 +8,7 @@ import { useInView } from 'react-intersection-observer';
 
 export default function About(props) {
 
-    console.log("aboutsection", props)
+    //console.log("aboutsection", props)
 
     const [aDelay, setADelay] = useState(1.5);
 
@@ -69,7 +69,7 @@ export default function About(props) {
                                     <motion.p initial={{ opacity: 0 }}
                                         animate={inView ? { opacity: 1 } : ''}
                                         transition={inView ? { duration: 1, delay: aDelay * 3.5 } : ''} className="text-start">
-                                        {props.aboutPhilosophy.content.map((paragraph, index) => {
+                                        {props.aboutSummary.content.map((paragraph, index) => {
                                             return <span key={index}>{paragraph.content[0].value}<br/><br/></span>
                                         })}
                                     </motion.p>
@@ -82,7 +82,7 @@ export default function About(props) {
                                 transition={inView ? { duration: .75, delay: aDelay * 2.5 } : ''} className='col aboutCol h-75 d-inline-block'>
                                 <motion.p initial={{ opacity: 0 }}
                                     animate={inView ? { opacity: 1 } : ''}
-                                    transition={inView ? { duration: 1, delay: aDelay * 3 } : ''} className="text-start">{props.aboutSummary.content.map((paragraph, index) => {
+                                    transition={inView ? { duration: 1, delay: aDelay * 3 } : ''} className="text-start">{props.aboutPhilosophy.content.map((paragraph, index) => {
                                         return <span key={index}>{paragraph.content[0].value}<br/><br/></span>
                                     })}
                                 </motion.p>

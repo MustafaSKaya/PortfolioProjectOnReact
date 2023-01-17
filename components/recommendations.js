@@ -63,7 +63,7 @@ export default function Recommendations({ recomHeadline, recomHeadlineDesc, reco
                                         <FontAwesomeIcon icon={faQuoteLeft} />
                                         <div><Image src={`https:${elem.fields.profilePhoto.fields.file.url}`} height={elem.fields.profilePhoto.fields.file.details.image.height} width={elem.fields.profilePhoto.fields.file.details.image.width} alt={elem.fields.referencer} className="mx-auto rounded-circle test-img"></Image></div>
                                         <p className="text-muted font-italic mt-3 px-4">{elem.fields.fewKindWords}</p>
-                                        <p className="test-name">{elem.fields.referencer}</p>
+                                        <p className="test-name"><b>{elem.fields.referencer}</b></p>
                                     </div>
                                 </div>
                             })}

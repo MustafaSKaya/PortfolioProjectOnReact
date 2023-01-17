@@ -76,8 +76,9 @@ export default function Projects({ projectHeadline, projectHeadlineDesc, project
                                     <Image src={`https:${project.fields.thumbnailImage.fields.file.url}`} width={project.fields.thumbnailImage.fields.file.details.image.width} height={project.fields.thumbnailImage.fields.file.details.image.height} href="" className="img-fluid" alt=""></Image>
                                     <div className="overlay">
                                         <h3 className='projectTitle'>{project.fields.name}</h3>
-                                        <button onClick={() => { setSelectedProject(projects[index]) }}
-                                            className='btn btn-outline-info my-1'>More Details</button>
+                                        <button onClick={() => { setSelectedProject(filtered[index]) }}
+                                        className='btn btn-outline-info my-1'>More Details
+                                        </button>
                                     </div>
                                 </motion.div>
                             }
