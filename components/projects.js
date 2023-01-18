@@ -7,13 +7,9 @@ import { faSquareXmark } from '@fortawesome/free-solid-svg-icons';
 
 export default function Projects({ projectHeadline, projectHeadlineDesc, projectButtons, projects }) {
 
-    //console.log(projects)
-
     const [filtered, setFiltered] = useState(projects);
     const [activeFilter, setActiveFilter] = useState("All");
     const [selectedProject, setSelectedProject] = useState(false);
-    
-    //console.log("selectedProject", selectedProject)
 
     const togglePopUp = () => {
         setSelectedProject(false);
@@ -31,8 +27,6 @@ export default function Projects({ projectHeadline, projectHeadlineDesc, project
         return str;
     }
 
-    //console.log("var mi?: ", selectedProject);
-
     useEffect(() => {
         if (selectedProject) {
             document.body.classList.add('active-popUp');
@@ -47,8 +41,6 @@ export default function Projects({ projectHeadline, projectHeadlineDesc, project
         };
 
         setFiltered(projects.filter((project) => project.fields.madeWith.split(" ").includes(activeFilter)));
-
-        //console.log(filtered);
 
     }, [activeFilter, selectedProject])
 

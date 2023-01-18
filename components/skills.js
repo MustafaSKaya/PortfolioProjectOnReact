@@ -4,8 +4,6 @@ import { useInView } from 'react-intersection-observer';
 
 export default function Skills({ skillsHeadline, skills }) {
 
-    //console.log("skills section", skills, skillsHeadline)
-
     const { ref, inView } = useInView();
 
     return (

@@ -1,6 +1,4 @@
 import Head from 'next/head';
-import Image from 'next/image';
-import styles from '../styles/Home.module.css';
 import Navigation from '../components/nav.js';
 import Header from '../components/header.js';
 import About from '../components/about.js';
@@ -28,19 +26,10 @@ export async function getStaticProps() {
 
 export default function Home(props) {
 
-  //console.log("dynamicProps are ", props);
-
   return (
     <div>
       <Head>
-        <title>MustafaSKaya</title>
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"></link>
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"></link>
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"></link>
-        <link rel="manifest" href="/site.webmanifest"></link>
-        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#fffd00"></link>
-        <meta name="msapplication-TileColor" content="#ffc40d"/>
-        <meta name="theme-color" content="#ffffff"/>
+        <title>Mustafa Said Kaya</title>
         <meta property="og:title" content="My page title" key="title" />
       </Head>
       <Navigation navTitle={props.navTitle}/>

@@ -5,8 +5,6 @@ import { faGlasses } from '@fortawesome/free-solid-svg-icons';
 
 export default function Services({ servicesHeadline, servicesHeadlineDesc, backEndDevDesc, frontEndDevDesc, unitTestingDesc }) {
 
-    //console.log("services", servicesHeadline)
-
     return (
         <section className="services bg-sec padding4section" id="services">
             <div className="container text-center">

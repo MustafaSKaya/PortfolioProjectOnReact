@@ -6,8 +6,6 @@ export default function Navigation({ navTitle }) {
 
     const [navBar, setNavBar] = useState(false);
 
-    //console.log(navTitle);
-
     const changeNavBar = () => {
         if (window.scrollY >= 100) {
             setNavBar(true);

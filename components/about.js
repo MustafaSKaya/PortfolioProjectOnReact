@@ -8,8 +8,6 @@ import { useInView } from 'react-intersection-observer';
 
 export default function About(props) {
 
-    //console.log("aboutsection", props)
-
     const [aDelay, setADelay] = useState(1.5);
 
     const { ref, inView } = useInView();

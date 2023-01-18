@@ -2,7 +2,6 @@ import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faQuoteLeft } from '@fortawesome/free-solid-svg-icons';
-import profilePhoto from '../public/1.jpg';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
 import dynamic from "next/dynamic";
@@ -16,8 +15,6 @@ if (typeof window !== "undefined") {
 }
 
 export default function Recommendations({ recomHeadline, recomHeadlineDesc, recommendations }) {
-
-    //console.log("reco", recommendations)
 
     const [amountOfReco, setAmountOfReco] = useState(1);
     const [windowWidth, setWindowWidth] = useState(765);

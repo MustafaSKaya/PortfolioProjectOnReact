@@ -6,8 +6,6 @@ export default function Header({headerQuote1, headerQuote2} ) {
     const element1 = useRef(null);
     const element2 = useRef(null);
 
-    //console.log(headerQuote1)
-
     useEffect(() => {
         const typed1 = new Typed(element1.current, {
             strings: [`${headerQuote1}`],
