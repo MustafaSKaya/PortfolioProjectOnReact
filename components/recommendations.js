@@ -32,9 +32,6 @@ export default function Recommendations({ recomHeadline, recomHeadlineDesc, reco
         if (windowWidth <= 768) {
             setAmountOfReco(1);
             return
-        } else if (windowWidth >= 769 && windowWidth <= 1200) {
-            setAmountOfReco(2);
-            return
         } else {
             setAmountOfReco(2);
             return
@@ -58,8 +55,8 @@ export default function Recommendations({ recomHeadline, recomHeadlineDesc, reco
                                 return <div key={index} className="item">
                                     <div className="test-item text-center">
                                         <FontAwesomeIcon icon={faQuoteLeft} />
-                                        <div><Image src={`https:${elem.fields.profilePhoto.fields.file.url}`} height={elem.fields.profilePhoto.fields.file.details.image.height} width={elem.fields.profilePhoto.fields.file.details.image.width} alt={elem.fields.referencer} className="mx-auto rounded-circle test-img"></Image></div>
-                                        <p className="text-muted font-italic mt-3 px-4">{elem.fields.fewKindWords}</p>
+                                        <div><a href={elem.fields.refererLinkedinLink} target="_blank" rel="noreferrer"><Image src={`https:${elem.fields.profilePhoto.fields.file.url}`} height={elem.fields.profilePhoto.fields.file.details.image.height} width={elem.fields.profilePhoto.fields.file.details.image.width} alt={elem.fields.referencer} className="mx-auto rounded-circle test-img"></Image></a></div>
+                                        <p className="text-muted font-italic mt-3 px-4">{elem.fields.fewKindParagraphs.content[0].content[0].value}</p>
                                         <p className="test-name"><b>{elem.fields.referencer}</b></p>
                                     </div>
                                 </div>
